@@ -58,11 +58,6 @@ RUN apt install -y liberfa-dev libhdf5-dev
 RUN apt install -y libbenchmark-dev libgtest-dev
 RUN python3 -m pip install numpy astropy pandas
 
-RUN wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.1-1_all.deb
-RUN dpkg -i cuda-keyring_1.1-1_all.deb
-RUN apt update
-RUN apt install -y cuda-toolkit
-
 #
 # Workspace Setup
 #

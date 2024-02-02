@@ -23,7 +23,6 @@ executable(
                 'holoscan::ops::inference',
             ]
         ),
-        dependency('blade'),
         dependency('jetstream'),
         dependency('soapysdr', 'SoapySDR'),
     ],
