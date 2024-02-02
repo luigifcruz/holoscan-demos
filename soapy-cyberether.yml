@@ -1,0 +1,123 @@
+---
+protocolVersion: 1.0.0
+cyberetherVersion: '1.0.0-alpha2'
+graph:
+  hol_source0:
+    module: 'holoscan-source'
+    device: cpu
+    dataType: CF32
+    config:
+      nodeOutputName: 'out'
+      nodeName: 'sdr-tx'
+    interface:
+      nodePos: [233, 308]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  spe1:
+    module: spectroscope
+    device: cpu
+    inputDataType: CF32
+    outputDataType: F32
+    config:
+      viewSize: [512, 512]
+      range: [-83, 1]
+      waterfall: true
+      lineplot: true
+      spectrogram: false
+    input:
+      buffer: ${graph.hol_source0.output.buffer}
+    interface:
+      nodePos: [900, 278]
+      controlEnabled: false
+      previewEnabled: true
+      viewEnabled: false
+      nodeWidth: 300
+  hol_source13:
+    module: 'holoscan-source'
+    device: cpu
+    dataType: F32
+    config:
+      nodeOutputName: 'out'
+      nodeName: 'fm-dem'
+    interface:
+      nodePos: [360, 719]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  aud12:
+    module: audio
+    device: cpu
+    dataType: F32
+    config:
+      outSampleRate: 48000
+      inSampleRate: 240000
+      deviceName: 'HDA NVidia, HDMI 3 (:1,3)'
+    input:
+      buffer: ${graph.hol_source13.output.buffer}
+    interface:
+      nodePos: [997, 799]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  fft16:
+    module: fft
+    device: cpu
+    inputDataType: F32
+    outputDataType: CF32
+    config:
+      forward: true
+    input:
+      buffer: ${graph.hol_source13.output.buffer}
+    interface:
+      nodePos: [695, 1030]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  amp18:
+    module: amplitude
+    device: cpu
+    inputDataType: CF32
+    outputDataType: F32
+    input:
+      buffer: ${graph.fft16.output.buffer}
+    interface:
+      nodePos: [1067, 1101]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 160
+  sca20:
+    module: scale
+    device: cpu
+    dataType: F32
+    config:
+      range: [-71, 1]
+    input:
+      buffer: ${graph.amp18.output.buffer}
+    interface:
+      nodePos: [1258, 1142]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  lin22:
+    module: lineplot
+    device: cpu
+    dataType: F32
+    config:
+      viewSize: [512, 384]
+      numberOfHorizontalLines: 5
+      numberOfVerticalLines: 20
+    input:
+      buffer: ${graph.sca20.output.buffer}
+    interface:
+      nodePos: [1626, 1015]
+      controlEnabled: false
+      previewEnabled: true
+      viewEnabled: true
+      nodeWidth: 300

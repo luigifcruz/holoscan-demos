@@ -1,0 +1,58 @@
+---
+protocolVersion: 1.0.0
+cyberetherVersion: '1.0.0-alpha2'
+graph:
+  hol_source0:
+    module: 'holoscan-source'
+    device: cpu
+    dataType: CF32
+    config:
+      nodeOutputName: 'out'
+      nodeName: 'sine-noise'
+    interface:
+      nodePos: [296, 347]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  con8:
+    module: constellation
+    device: cpu
+    dataType: CF32
+    config:
+      viewSize: [512, 512]
+    input:
+      buffer: ${graph.hol_source0.output.buffer}
+    interface:
+      nodePos: [859, 74]
+      controlEnabled: false
+      previewEnabled: true
+      viewEnabled: false
+      nodeWidth: 300
+  hol_source4:
+    module: 'holoscan-source'
+    device: cpu
+    dataType: CF32
+    config:
+      nodeOutputName: 'out'
+      nodeName: 'logo-draw'
+    interface:
+      nodePos: [595, 628]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  con6:
+    module: constellation
+    device: cpu
+    dataType: CF32
+    config:
+      viewSize: [512, 512]
+    input:
+      buffer: ${graph.hol_source4.output.buffer}
+    interface:
+      nodePos: [1065, 517]
+      controlEnabled: false
+      previewEnabled: true
+      viewEnabled: false
+      nodeWidth: 300

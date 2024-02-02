@@ -1,0 +1,702 @@
+pytorch2.1.2:›œ
+Ç
+input
+onnx::Conv_79
+onnx::Conv_80 /Conv1/conv/conv.0/Conv_output_0/Conv1/conv/conv.0/Conv"Conv*
+	dilations@†*
+group†*
+kernel_shape@†*
+pads@@†*
+strides@†2≈/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(306): _conv_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(310): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(43): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Æ
+ /Conv1/conv/conv.0/Conv_output_0 /Conv1/conv/conv.2/Tanh_output_0/Conv1/conv/conv.2/Tanh"Tanh2»/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/activation.py(356): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(43): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+ù
+ /Conv1/conv/conv.2/Tanh_output_0
+onnx::Conv_82
+onnx::Conv_83 /Conv2/conv/conv.0/Conv_output_0/Conv2/conv/conv.0/Conv"Conv*
+	dilations@†*
+group†*
+kernel_shape@†*
+pads@@†*
+strides@†2≈/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(306): _conv_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(310): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(44): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Æ
+ /Conv2/conv/conv.0/Conv_output_0 /Conv2/conv/conv.2/Tanh_output_0/Conv2/conv/conv.2/Tanh"Tanh2»/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/activation.py(356): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(44): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+ù
+ /Conv2/conv/conv.2/Tanh_output_0
+onnx::Conv_85
+onnx::Conv_86 /Conv3/conv/conv.0/Conv_output_0/Conv3/conv/conv.0/Conv"Conv*
+	dilations@†*
+group†*
+kernel_shape@†*
+pads@@†*
+strides@†2≈/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(306): _conv_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(310): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(45): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Æ
+ /Conv3/conv/conv.0/Conv_output_0 /Conv3/conv/conv.2/Tanh_output_0/Conv3/conv/conv.2/Tanh"Tanh2»/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/activation.py(356): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(45): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+„
+ /Conv3/conv/conv.2/Tanh_output_0/Maxpool1/MaxPool_output_0/Maxpool1/MaxPool"MaxPool*
+	ceil_mode †*
+kernel_shape@†*
+pads@ @ †*
+strides@†2¿/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/functional.py(705): _max_pool1d
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/_jit_internal.py(488): fn
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/pooling.py(92): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(47): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+ó
+/Maxpool1/MaxPool_output_0
+onnx::Conv_88
+onnx::Conv_89 /Conv4/conv/conv.0/Conv_output_0/Conv4/conv/conv.0/Conv"Conv*
+	dilations@†*
+group†*
+kernel_shape@†*
+pads@@†*
+strides@†2≈/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(306): _conv_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(310): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(48): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Æ
+ /Conv4/conv/conv.0/Conv_output_0 /Conv4/conv/conv.2/Tanh_output_0/Conv4/conv/conv.2/Tanh"Tanh2»/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/activation.py(356): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(48): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+ù
+ /Conv4/conv/conv.2/Tanh_output_0
+onnx::Conv_91
+onnx::Conv_92 /Conv5/conv/conv.0/Conv_output_0/Conv5/conv/conv.0/Conv"Conv*
+	dilations@†*
+group†*
+kernel_shape@†*
+pads@@†*
+strides@†2≈/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(306): _conv_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(310): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(49): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Æ
+ /Conv5/conv/conv.0/Conv_output_0 /Conv5/conv/conv.2/Tanh_output_0/Conv5/conv/conv.2/Tanh"Tanh2»/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/activation.py(356): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(49): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+„
+ /Conv5/conv/conv.2/Tanh_output_0/Maxpool2/MaxPool_output_0/Maxpool2/MaxPool"MaxPool*
+	ceil_mode †*
+kernel_shape@†*
+pads@ @ †*
+strides@†2¿/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/functional.py(705): _max_pool1d
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/_jit_internal.py(488): fn
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/pooling.py(92): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(51): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+ó
+/Maxpool2/MaxPool_output_0
+onnx::Conv_94
+onnx::Conv_95 /Conv6/conv/conv.0/Conv_output_0/Conv6/conv/conv.0/Conv"Conv*
+	dilations@†*
+group†*
+kernel_shape@†*
+pads@@†*
+strides@†2≈/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(306): _conv_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(310): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(52): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Æ
+ /Conv6/conv/conv.0/Conv_output_0 /Conv6/conv/conv.2/Tanh_output_0/Conv6/conv/conv.2/Tanh"Tanh2»/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/activation.py(356): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(52): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+ù
+ /Conv6/conv/conv.2/Tanh_output_0
+onnx::Conv_97
+onnx::Conv_98 /Conv7/conv/conv.0/Conv_output_0/Conv7/conv/conv.0/Conv"Conv*
+	dilations@†*
+group†*
+kernel_shape@†*
+pads@@†*
+strides@†2≈/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(306): _conv_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(310): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(53): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Æ
+ /Conv7/conv/conv.0/Conv_output_0 /Conv7/conv/conv.2/Tanh_output_0/Conv7/conv/conv.2/Tanh"Tanh2»/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/activation.py(356): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/container.py(215): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(15): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(53): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Á
+ /Conv7/conv/conv.2/Tanh_output_0/Maxpool2_1/MaxPool_output_0/Maxpool2_1/MaxPool"MaxPool*
+	ceil_mode †*
+kernel_shape@†*
+pads@ @ †*
+strides@†2¿/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/functional.py(705): _max_pool1d
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/_jit_internal.py(488): fn
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/pooling.py(92): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(55): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Ñ
+/Maxpool2_1/MaxPool_output_0
+Conv8.weight
+
+Conv8.bias/Conv8/Conv_output_0/Conv8/Conv"Conv*
+	dilations@†*
+group†*
+kernel_shape@†*
+pads@ @ †*
+strides@†2Ã/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(306): _conv_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/conv.py(310): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(56): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+Ç
+/Conv8/Conv_output_0output
+/tanh/Tanh"Tanh2œ/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/activation.py(356): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/model.py(57): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1508): _slow_forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(124): wrapper
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(133): forward
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1527): _call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/nn/modules/module.py(1518): _wrapped_call_impl
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/jit/_trace.py(1285): _get_trace_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(915): _trace_and_get_graph_from_model
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1011): _create_jit_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1135): _model_to_graph
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(1596): _export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/lib/python3.11/site-packages/torch/onnx/utils.py(516): export
+/home/luigi/fun/DataScience/CursedNet/export_to_tensorrt/export.py(15): <module>
+
+main_graph* BConv8.weightJïÂ,?&nB?*B
+Conv8.biasJAÍº*öBonnx::Conv_79JÄ™7√éù-¬.P≠¡©'>P›|¬g’ˆ¡CH4¬ªxÇB˘|V¿BôAŸÓ∑¡æO5BùÕÅB àA8.Bæ≠¬À¡lAYî¬Ìº¬%,eB‰ÁBêû¬BLπÌ@»´¡ˇ‘ªBÉ}Bˆz;Bëäæ¬ÇB≤^^AÌ£Ø¬»5˛@¸ÚÉ@√üÍ_¬Èê˜¡∂Õ—BQYœ¬≠ú•AÎâBÛ∑B aÂAJ"AT?(=˝Aë8Cî
+Bcú¿©¬®àùAÖsj@êØù¬5;BF'H¬U–:Bπu∫¬ƒÕI¬ÒìÒBPîB¬“·Aâ<¬ »0B†|B.°B\RBA¡U.¬≥à‹B˚˘•@oÕcB¢˝åB8¬%óAè'ã¬◊ˇ‡¡˙–~¬6Ÿê@z{¬#ó¬ç’B˘5]¬‡†¸?6»!@⁄l›¡>àBôö‘B°RŒ¡å¢Ä¬alAπü¬nªá¡j≥∆¬·.â¡õÎ@>ﬁ‚¡üÒˆ¡àùÖB*UBonnx::Conv_80J@LÅ2Ω¬úé=˘ß=¡:à>‰≈ÖΩ–˙(ª‡AΩ˘RΩÑ•<“;˚<ïæƒ«¢Ω©ÔÏ;T’<◊D∂ΩTÀ º*ö0 Bonnx::Conv_82JÄ0_çöæÂgfæxø54à?ö(Dø¸$-Ωœ9?¬%?NÜƒ>@—î?q‹>“⁄Ìæë∏SΩã∂“Ω∑è>Ç˚WæX—ø€’¥Ω†⁄Ω–ó¯æ3Â?&g>
+üÑæE
+>$âæcBüæc⁄±æòãvæî]Œæ5Íª>t>ø$j>.î ø1©=gÃ=>∏9c?[tøõær˘ø•øéHK?’´ ?aªæ◊ÑïæFûá?ˆˇ=Ú˙…Ωí¶øï3>líæΩ>vÀÓ=Væ>MgzΩ Û>\æR5ÓΩ√…|æ–âhΩM®Ω 	¬æD
+>U»Ωñè~ø’ûæïeó>,ëòæœø•_}Ωu—u?ÜÎíæ⁄iΩ	˜”æèà?‡"LæZ8=◊Õ!?ÉŸsæbÇÄ>∞X'øÊqqΩy0‰>=¶Å?«∏C>{?
+øœ±æ˙“>Ffg?≤⁄>Q>yDõΩLùø™ß?æ¬f>÷D´æçØe>ø´ç<€fÓæ)ªΩOR•>b2?¡t]æ∏?>Éw¡>Û˜ê=”‹>øz´ø¡º©>9lèΩ∏• ?H,∫Ω√ öΩ›∞°æ>Å¢>¸j√=–2ÑæpQ±=®ûé>4O≈æ≈îÔ=Æo˜ΩΩ.%>≠d_æ!§>∫áy>^õ¬æh.øx
+L<‹‚üæ/Î∞=∑üøøÍ?¢Ò-ø$yh?+ÖΩÕ°?ÓÅ,ø:ï=¯m{>à>’ΩG1I>%É=Á2»<U8ºΩ}=ı(g=ÑˇZæ®ûä<£áæäN√>MddærF>ïD>kÂ0<åy={¶Ω…Æ¶æÔ≠íºg°>˜ﬂÀΩjz¢=çŸÂΩHÚ¯=Ö,óæmOÄæ	E^Ω’ìΩ@	 Ω LïæÏü>XW>=«?<¨ÎäΩÅÖqæ@*©ææ±>,ÇöæÅì5Ωogæ7&p>
+YΩµl|>!X…æÜ≥ã<eÍΩ®¿=&Ú$>Óƒ<Fƒåæö>Ô=GúæÑ€d=íP=Àîær…º+Òèæ£•æV<ªîú>¯{µ>Ä(+>∂ÈüΩÎ≥ÌºÓ	êæ[4Hæ-à>Œ9->¥∫kΩ¬¨	>ôÌ>ŸCƒæÊá"=Yl9>_∂¸Ω2Æ~æ$€Ω5›Ñ>P0 æZ…ªâ5éæü¢Aæà*
+>M Ô<uGkæœ÷Ã>ô˚?>∆>âæ•æƒpˆ<≥µ˚º˜X>√J7æƒìææ£cá>≤ºó>(l>\wº∏†:>c∆Å∫pA>>÷∂;øn‚æ÷O=kÀ&øãAπ?ê ø[‘ >¿àRøèsË=˙	†?Sıâæaîﬂ>áé?V≠æGCWæƒãΩSyQæZ%?#ï>3ö◊>Ëln<Áìæ[ÁΩ∞}≈ºΩC?íﬁæís=µ[øævÉ$æÒ‰ΩYoæÔÑx>·o∫æü∆>éõf=HŒ∆æ»Öæ>ˆœÅæôñ>0€≠æ‚T=Åá’Ω»i≥Ω@´=∏±<ΩıæÈΩ∑7?O∑æ√L5?°?ö`>@%?Òz{æ∫Îæ	ø©π=`"Äær£@êµˆ=∆£¯æ}îÁø
+<îøÁõæ¡Ôø˙jnø9‘˝æ˛ô≥?æùÏ>∂ÑæÊùÄ?±EB?‡ÆY>x*íæÏnÖ># ºrú¨?@ ?»H”Ωëj@Ï]ΩÂ`û=ßÙ??)çb?Jô>jÅΩ¶∞d>¸~æ|¸øM>ö=‡Dø±Í´øù“Ω·´Ù=Vóø—$Uæ◊W¸<W5>ÿƒ=áÎÉ>ã-ø§Ω´?ëæêk¸<-^´æÀ¯tΩ”5Ω_b“>Îﬁ…Ω=KeΩ‹◊êΩiÉ=»˝´>;ﬂw>âpÎΩ“¶ñ<Ã∫óæÜêæL˘ôæ¸Aá=c_Eºsµ>’jΩtä<R¢>9˙âΩwr<j‹æªŸ>ïA>U£N>ΩæRUÉæ—ï˝;ç%<>M˛v<E≤9æ•vøõ2>L;>“aæÊâÃΩÄ≈¬>0ªS?&M◊=€5Çø¯$øovì>cÕëæ∆ä‰>∫'øœ©`=ööJæﬁæUØSæôüü=Ò|˙æÚà±>©˘ßø~b3æÆˇÙæØ˛_æ…≈Èæ,8e>Z¨¥?Ì√Ã=«≠?t›S?o≥{æ˚2R?<≠Ω@˝¬;JKiækã?Ì;?S…^>K®ì?É:>kÇøå:?dPQ>h–(øÇ6ø‰Üø’˘†ø;˚K>Ílæ2PÔøñù∞>7ªΩiNjæØúäø¯F‚æ,?ÉΩÜÍ¬>›¿MæÅ˛+?ÏÄ>å&,æctøÌˆ*?Kü?æÕ…>lw‘æÖÄ>l‰ïæ@¬˘;∏rUæœlŸΩze÷<-ÅøæΩ*]<@Yæ0«˛æ™8–æt>?übøov4>†ê>Æ>?∂˜aæ‚%ø†‹£> ∂=D÷,>«æ/ç>◊(!>å‚‚Ω¶J°Ωùâ˛>¸@$?ƒG\æı8>~HÙæZC§>Pqóº#.èæØ≈—=(aMæQÏãæD•l;ﬁ–=œΩ2õìæ‹Æ¢<N¶?>@ªÎºLΩ_D˝Ω'Æ>dBn=„ï“ΩläíΩX?bΩì÷=Ø
+àΩ¯+'ΩJÿΩ,°?>êl•=	òæ>“LM=3¶º¶tΩ3ÒäæÊYΩàC>;ÏΩ∂ãæU¯Ú<‰>Û… ΩFë=jÚ–=˛ì}Ω{–jΩ∫N	<IgNæ∑+=Äæ5æ*≠î>Í[>bÅ]9+9ΩΩ&·Yæ-Ä=&tg>~⁄’=]¥è>5≈ÅΩ>P‹=Â¥æ≥¬∫>cM=›Øë>(f4øÆ\7æZúm>wZ,>Ln¡=’f˘=asæ/_\æaï¨º4zôªÉJ∏ºy§Ωﬁøi>G!HΩ,*ïæÛ!◊æπ3∫ΩtCﬂ>k…æﬂ‰Ω<ñ(=¶√∞ΩIû==Pç>ø‘Ωü¯π>˛Za>¡-]Ω:Vüºë€>§C>qA>w{øÛD(æËéb>ÏœΩ«ı=lŸ=™C¨æU»>±‰à>,` ¿è“>~’aø.Ó5ø±¬?/àÒ>•C€>é)>&€>òÁÈæÕ√¸<∏˙>æà@#l>ß”?«˘?òË«Ω⁄>™°ø¸>R∫ø{6àø¸uπ=Ôø÷Çø –ÃæÔò‘æ˛ÖEø0ù¬>_Oø¨∞æ>R?∫W'?"áLøÃÜø©Å?_Ä>>î=vv>?«0ﬂªµYÓ=;UQ=fÖÑ?ßFQæíM1æK’>∆Ç>{Ç>„•èæ^+ù=k ‚>„.ÔæGØú=q'ÂæíÈD?á≥AæU˛=á3 øx>á>ÁqP=Nqˆº≤Ô>«†uº.y=&∞‰Ω	⁄i>R∑;æd}GæŒêà=o
+ƒ>å„ÓΩØ˝Ræ„‰y>ÙãÅæœ±>Fsf<ßiæ&?0zˇ= ì
+ºÓ‰≠>}hæï‚?õŸ&ºÆ¶ΩŒæ^«>IÓæ≤Ío>Î->Ã!>3•3æY‘ë=;Wøπ@>p`@q E@ú;aøÑFT?E≥øΩö>Nãñø˚#ˇ=¶˛∞>û¯≈æE3^=x±>¢™•øúUSæF©±>U’?Ö•çæÚ Öø\∞Ÿ:•´ΩŸı>gﬁ÷>∫ÚL?πÍ(=a∆·>^™%øàyäΩ(P‚?ÙyPΩ6·>∞çõæ_ŸÙ>yB?K˜˚æÙÉ?4Ö”æVÚÂ>®yï>~ë1>Ì⁄ø˙
+É>ÿ‹º6°¿ˇaT>Ç>4?#0?Êí>ÙHæJ?j“Gæ.âîæ§ΩæZÜRøøS9?F˝æ’ﬁ:>:ù®æ¡‰?…÷‚æS∑Æ>•ΩøVæYü\æ⁄V%ø»&¬æ≠G>C¡œ?,s˙æP˜à>Cç=¸Ã?<®áΩN±àø÷êõ?§zZæR‰û=C?l!–æ{˝˘>QpÙæìÖ#æhk˛>ô£>5Z>ã+àæ1'?z‚Ω@—Àæ'’<'¡èæùÏé=P]ÕΩ«:ÛΩ«z]æÄv+ΩÙ„4ø´û^æ7xBæ…$πΩ¬]l=WuåΩ˘ΩN'>«Àù<ƒ6	<º◊¬=Ho÷Ω‚hxΩUë	æ˚Óº<›ΩŒ6Ωªı’πΩ,,;y¶=]Û|ªÇ(ûΩ§ëΩ™≤=] IΩD∆IΩøwÃºNFjΩ!œHΩÁ2æõîæÎXZæeìéΩ„ƒJΩLJ)>V∆&>ÒÏhΩ˙Èº§rSæ&Ì&Ωózp>
+eƒ=Z{ü=K°5>U˙'>vÛò=µ∑Åæ≠aæ6Ω4∏£:zr`>`√æS∂îæΩCoøi™Õ>≈0lΩÑ"kæ‡^>¬>v]¢Ω&ºë=˝cYæq:£Ωêëæ˘Ã=ˆ´
+æB§æ’=‡>ó¿Y<∏0æÇ+ﬁ<-Wk=ÏΩ∆Ωse[?DÙ6øt{Ω∞˝ï>FÆæ©Ä>è$„>ÊùQ>=G€ΩUGëæá †=ºA<>j∫ì>“ﬂ·=≤ƒÔΩ_û8ø v;?œÇúæ[‚}ø˝ê8º¸¨<Õ’õ>Öç∆æ∏^÷<O±çæ/µπΩ≤æîª∂ÆÈºÔ√ÿ=¬QMæ?9:>√˚|>HQ=ÿ†æ@ËΩ>ÛDæ©
+å=„ûö>Àí&>=?æ\Ê`>™à<Öà¨æûÛíΩ÷}®ææ<¿=∑æÕui=YYøºeÚ=:‹1>kÂïΩ∞ Ω≤Àj=˜®ùæñèÁæ≠,Ô=à¬Ωôæ2Îßæli‹ºfEæ:5P<Æ>W>ñ=áß=Å◊ù>UÓΩ¯W«=°!ªHòy>±f>Mèæ—yæbnΩ‡1È>g95>à™ænNøáõÉæQ
+>CÀåæ¡8äæ˙u?4B;?ˇëøs∆≤>.äøe]ø>?l ø!≤ÉæüQæ,ËæV∫ æœYÖæQ ◊ø“ÏÖ?I’eøw¬ø¬Q¡>Ï∆:ø2>˜1Ωæ;/ææßÅo>)ãø¢ ò>`!møÊqg?— –æîb?AnQæù?Ov¶<ÉD'ΩZì>–™%?fˆÚ>ﬁNÜΩ¥≤É<`*æ»kAæ	L©>a≤Ñæ±ä?ÔÓ`>`ÿv>ZT.ø7ûqΩ ä>·˜næòπ∑<∂ÁM>w∂>éI∆Ω&˚:=1†_æãÉ&æ"1>o√æo(>Ï¥Ω\~ΩΩ^≤> ∆iΩóæ’[4=†ä!æ—8˘æo6(æU÷C?¿ZÚΩŸR©ΩÛ ?¸J@øßaà>!ê"æ”`ıæ|åæ&âΩÑ>=>jΩægg->·Éç=ÀﬂıΩÑ`H?|æ/?§FT>Í4ûæ˝á˝>œBø≤≈˝>~Û.øiè?í}iΩ5ë£æU>+ΩÎ<âΩt«óøœ≥Ø>]x
+?h”˘>ùÎ =Ωîêæ
+Ü:? 4 æq‡>Êc„æ¯Q1?€#*øUƒÅømçq?∞QU>◊>I?º'?u”->Ù©Ê<M∑<?≥,=Fûø˚≥?≥ÎøÈ#Hø7ãæƒê#æ¶9?ùÅó>•™>P≠?äRE>}ƒ*>\±æE¢zøôsñΩuË>≈∏Ë>æ®Jæºa!øÉﬁæ≤+?ÉΩøÃO™æõd>gÒ[æ∫Ïæ˙?†®qøÆ.?+3òæK”?x Ω>π¬æVU˛æ€x˜=
+©>Ê∫¨ø•;?≥>Èä>(HSø±R?0≤õ=&è> ∫Ä>vÑëæ";d?•€êΩg◊ƒæp®<T–r>+M›?^≈û>Óùæôk†øW˘ø≈ù—>¢¿û¯Z>iô >≈ﬁPæíˇN<˛6„ækZøó_à?2¶w>K	ù=:áøæÉ=¨<g?YF¿‰\é>/ﬁ?ñÓæ&∑æﬁå@ ˇøódæÌ∫=ø!›E?’¶ıæH›ûøJ*w?™Ò>øÈG-<&uÙæ[Mù>Eø‹? Ôœøé;0æòn¥øk	ø¸ ˛=Ÿ=M?\FA>Eı	?l@êç®ø¶ˆ:?Ã˛˙?1"^ø·Û"? ÜÑøØà‚æ&<ãæ¨=åøóèæá¥ =h"?ˇ™Ø?O#≈ΩÊü’=à`1>πó">˜ZΩBMŸΩÀÊµΩ–H‚<ÔR=•æ@éæwkUΩÌ◊/=N='8¨KΩÃkDæç>ËzΩó*≥<ÿH<öâ=∂!>ﬁ˝%æL≥I=Ñ™tº|Åû=O°◊º‘¡
+æ’÷<j∆>ÂˆÎ<s«ÊΩt)€º{∫Q=2SÃΩ=¥æ	==®Úç=ËjF>≤ı>wÔ>4îzΩ≥Fæîö>»v´=‚ËíΩuVt= w;÷·%Ωe]»æ∑8 ø5fö> ¢=˝â>¡†˛=ÌX??π9?Î’>`¡$?+ ÓæUS-øª”æ)X=ßÌºòπ	¿L"ƒøøOúæe¥‡?ıÑ\? /ãæGV<?mxq>[=ó>7.?B‹J?ªÏ>™–«>MÄ^?(9"øf∆>⁄:ÎæƒbæSá+?©Î6?‰EæCèºHø†ÀQΩ@{XΩ´¿˛>e?– %øÄ?„U>Ûçîø°Z¡ø^V><1Úæm‡_>jR∂æ?¶>Ì›Ó>ÕÏ˙=>å æã‡±æ¿E?1´S>8$„æTmñæêm1?í∞‘æ•°◊æ‹?ΩäÅî>’£æ!¶ãΩÏº%ºÎL;?∑(ÀΩUW¥æB„>˛Ûø(®ºΩÎ∫`ΩdR‚æÎCâ=Znæ=ÅVø]AéΩ¶ÔG=˙–&øp¶™=o>£*ÃæÜÕºóÅ>"¥÷ΩäP3?˘%ô>´ﬂ?éÏ#ΩüF?^£ øéf\>¸B,øÌÔælnÜ>õÑF?Å≠ãø.Gñ?"8ø#òæÙ?ø≤û>™æ*ëº2ô≈æ§Jì?⁄⁄ñæá˝x>\~nøπ…æÂ?	˙?ÊGº>÷≥iæ/ﬁ?0Gøs‚I>ä¢ó?733øÆeõ>Âîû>&3ÄæZúâæ†øÌ⁄É=¯N>P[4>ÆòÛæE—>åÙ+øÅ)ÖΩ/'5>\‚Ô>J0>~
+:?%ø.)‡ΩF¥œ>»¯&?Â≈5?m>Xb#@-ÀV>ÖØæqñéæS0Î>7!œ>êAÙæe™H?ªò#=äw>fÛï>Ææ>∆Upøodæñ∂>¸”Søñ‰ÊΩj#Üæ¿ª=—7”æ°‘6?¡cZ?P…É?ƒ—œ<ï[ø⁄ã:?j≥?\x†?ãÛÆ>§ÙI?ºkF?V_À>Wßî>/(tø hñ?ƒ™ª´¿å>"FáæõÚ?n≥Üø:ÚU>·Aø41¨<ﬁgV?±úº<Û4	?d/= Â=mMS>ø·âæ„ì~>uA?€mP?÷∑ætsº™-⁄=\&Åæ;∆æUQ”=8á,>!‡•>H>·∫éæRúl;…£à;=cæÁ∑æÌo>tï>ëiì=èÓQ>Öí‡æüü,>°·vΩÀ[>
+(
+>Ÿ´ïæ˚ï£>Ûr≤>ﬁ‘>[	õæ‡ñ>o[´=tù7ø±¶º’mPøÃø«=±p•ª;UÉ>èd–<n∑û>÷ùvæBE™>,ø∫>äóŒ>ÄùTºƒ.;¿†◊øO‹I=◊æ¢ô§>fJ‰>I≠≥æmƒæb≈=Ès$=·\.ºd≠LæÁ‚.?AÁï?B#"<ÃG—?‰T?~ït>±|‡øEV∞æàæUMÊø⁄6æJ4ø◊íæ‰¡”>Ezõ>µªQæqﬂ~øBÊb>ã∫π>«∫ëøóqÕ>ã?`Aræ]˘øñˆ¬æt∞¢æ"#>næ?fÌ<æ#Ω
+æ·œ{?∆Dô?ê¢*ø≈äæÎ';ø\ôÀ>Ú>kﬂøJû∫æŸF?<¨ Ω£ ëΩJj$æ/Rê>æ”*<$ ºí=XΩu€@ø|/Ñ>D÷æ˛–>¢oº;˜$ΩJ√`?ãZæTÔønltæƒî>Ë:wøUˆ=O".>ﬂ>p√<ª.Äøc+æÆ_¿æ
+ÉK?ebiΩﬂùóæG⁄:?Ì…?ã≥ÜΩ0Æø∞;rº–ànæ˚Ä»>'“.?Ò"˛æëÜ/>˙?¬˚à>gÿŸ<∞6ì:ÿıW>*ñ Bonnx::Conv_83JÄ„†˝æºlÆæÜ„U?†ÒTøAR=qïøP2Ã=(¶À=J£Õ>∞(jæF∏$æûû>(E˘ªØû`>yl’=ËΩ§fÂ=!`X>ƒjÉ<f‚ö=1™®?©ıê>õö≈=îë¬?H@l>Ò«ºõ;Æ>~V#=j¬'>®°øzñ£Ω‰
+Ö>*ö`  Bonnx::Conv_85JÄ`
+ô≠=êºéΩlüˇº»:\æΩù>æ>iÉ;=zp©>SS>Ô.ºu%ªΩ t(Ωy$ﬂΩ\Ó>s¿æE∏àΩùX=≠¥ãº*aõºÆ€ >Wéè<¡=/>c7(>7¢ç= U⁄=¨`º[÷K<ö°Çº—≤Òºx≤Ñºm;‰Ω^==U¿ª=kéEΩªÖΩÀ“f=˚√Öæ£ˆ∂Ω”
+=
+∏<>Æw¥=)ë“=Ã>4<°=E∞"º{&æÄø<ô◊¨Ω¶1¬<S;<ôæ(¥Øæb›•=Ifº©>%{*ΩçYÚΩS®\æØ:9>»ñ,>ÿÇΩ°lâΩp{ΩÈ'æÄ≠=∫«Ö<dp¬=¿Ûç<ò’dΩßgaæ¥A>b˘>>—Ö(æ≤π<ßÆ~>W¬ÄΩ|¢M=\ÏªDh<æÜ‹`ΩvìºwN_æÇ†ÿΩe°=É«lºiÀ='`ÇΩ˜ü=÷T-=∆z¢<é£|æÚ∆Ω(i9ΩÜ÷=˜ƒ+º]´¶Ω¶π<G9mΩ…Å‚;…Õf<Âï<B»æ¥Â§=»£=œ5Ÿ>`~¸æU¥æ™yÉøa$ıº≥<mÅÈ>ùùL>BU·=Ö/>∑¢Ãº‚`<Rºõ∫¸´>Á3æ=g[GæÌ•?<%B<Ÿ°˘<¸œÿ;˝rΩèAaøAŸ˚<¢9>º»FæI>¸º†»>EQæƒ•SΩƒ⁄SΩÚ
+çΩ‡Hïºëbæˇ%æ›!Û<≠2$==	î=˚/âºR´ŒºÛ:ÿ<S(∏ΩH∏=ìew=BÛ7Ω“‚=qÒ=B–=Xìb>J=ï∂(>p˛=]Ú>≈2ÍΩÙ]P?˚f=?g!N=õ‡.>,ZŒ>àS=…öÑºB∞==.°=<‘Ì=Áè>ÛêË= Ã(æz)Ô>_¡Ωƒ€¿ºìïπˆﬁ^ºÃËΩ◊…Ω∑iΩ»\£ΩKÍæ;ƒ<˝∞=(£GºY–mΩ«sZ=‘6'øÚ‘ºÛ$^<˛ê≥ºï.íΩòävΩù[ƒ=ø‡õ=€>©Ω(≤ªñlÁ;y‰NΩù⁄&=ø÷‚ΩJ˜º@
+	>ê>±ºPG>©$>≥£ê<?x°=Ó¥ïΩ´oæ:!íΩíLG;yyYº€#=´%æM,ˇºö°/Ω´J-æªëGΩ##$ΩKy=ôüÂº˝Øˆº(ù< ],>¿3=F2>ˆï=uÎ´Ω ö+æø\D=æ\ÈΩÌºmΩø4÷Ωˆ‰CΩ‘D>|‚L;∆ÜÇ=6‚nºïÊﬁªiƒgΩÄX¥=yÄÙ=ã_â=J\ìΩaÈ=œÓ=LXd>¿∞k=]ùƒ=ñ∆>=+ﬁMæwœΩHΩ‹'{=óP≤=§ÔB=nhçΩX8*>Û”æ=Ù?÷=ûΩÙîΩ¸!æ‘´–=Óã&ΩV$6º£fJΩ…—8<∞Yí=íäfΩ	ào9W-=:Áôº	®<àiΩ	æP)Ñ<∫òƒ:zSÜæØ4>ƒú=⁄C‰=’û.=äÿÔΩrÖòº(Õÿ=aºp;Œú>ø.Ÿ=˙9'=ı¡·Ωõ‡Ω"uiΩ/±Q>	ÀΩEï=¿/(=Av>è=Á=ÙnœæÜΩ:´è=∂É=dº∑Ω◊ä=#cΩ•Éæjãï<v–aæ⁄#=É‰É=⁄ZænÈºÂ¢™<Úù>•(πº
+⁄ö=›îπ>0Ò˝<xœ™=O—æ∫¿>>uíΩÕ"÷>M8∫;ÍtΩxÛΩÏ◊∆ΩãDΩ2i=Ï÷æúhê<i4ΩTa≤=˛
+µ<€º.qæ·®∑ΩT\ë>\[´=j9PΩO<æaró=:àŒ<È 2æ{nÛºYàò=ˇOI<ÍUê=7Õm=©ŒŒΩnøeH>õ)”=£&>/¢=«t>§ﬁdæ®ú=kÃΩøñæÿå=dPΩˇDM>!å=ÓöÏ=(97Ωv®;Ñ7Ω&(˚ºCÛVΩFJïΩÎr√æ	¿H<Ñ∂»Ω@≠…=7@ªﬂe¥=ä4…>ús˙<2ˇ∂æüΩ}˙ΩÚ4ÿ=“Í=®/B<ì®<kÒ9æ"êΩØíÇ>|∂œΩj∞=fk0>íZD=⁄#+ºç>sB>ó->ÕdÅæ‡ΩΩÒN5æëH≈Ω°i˛=…jΩJæMŒ	>`ÇdΩπxc>∫ì=L= =ê·æp÷;nç>.π>àG4ænﬂH>è…ΩÓÇêºpx]æK√>©ƒΩD(*Ω’†Ï=îiæ4÷Ω=^ßΩWÂº1(„Ω%Å>dÎÑ>9yõ>®O+>	~Bæv6=!µ…=ãN^ºsæÌ·ê<iı>ôìı<≥ìµæÃwƒ>¨@>÷ñ	Ω”Æ>Ü∞—º≠◊æi@t>e6•ºiΩÕ2æŸÕ’Ωû@µ>'Eæ}¡=ÿHæy	ºÇòæΩ*qi<O "<aÇåª870æ®aæ£#Â=kùûΩÔá_=«ØΩÓŸæéáæ∂\`=¥	LπÑº=_8æèê+>ù"x<∏«ìºe'∂Ω ©ΩΩ>ôáº$d/æ
+Ù=n‰¡<BÒ≤ΩrΩÖ>Ñ˙<d˛d>™KÚæû!§<+õ">DsæÏüΩO<!:\WﬁΩE'√<F{Ê<FV-æ.§=?L±Ω`M!;úMü=Ô(¶Ω ΩÓª®¡ö=}&ÜΩ≠U`<Ü⁄<+u>m±æ™>P…£>iÂD>çuJ>Ï6qΩ-’öΩu‚EæE"Á<:Ù°Ωrª{ùƒ>áà‘Ω>3Ô=a¢>Ω/Ω©¡˚ΩW⁄~æ(ûñΩ[ëΩ2»+ø‰´læﬂÔMæ˚]>y’>Ûxº#«<“È>∂¢-<ÄVûø”.ï<$Ωs„√=Wré=(*fº‡g<ø˚8Ωå|¯=G…/>Òi>úHZæ∞,ø),øıÕYΩC=Ω°©>Õ¿˙Ω…ÜèΩ¬≠äΩ%=O%…<ÇIõΩOô>∑£?l>æs˙⁄=ÓÃù<˛>πöº∆Gª=∆ßFæHºúº#©Ÿ=^±SΩk˝—ºf>9;¨=¨…(ΩÂ_Ï<v∆&æ\`XæäË]Ω˘uŸΩéBY;¯$=æ\=ôD3=j û=^J:æU>›<O%>:Ôâ;|PÊºœº±1›<»˛ºf òº7â>Yô[>Ñıô>ê35>˚ê#>-ng>”∑_Ωz<ÌºŒ_8æœÉæ–.>≠º˛Ω´ËÆæ˜&âΩÖ‹>@¯>ﬂV€ºæ«Ω˙4$æèƒ=ü±ã>&á>«R=˘,Ñ<mzŒ=nv®=Yn>ÂÌºΩ≈¯F=?9–<≠J=
+$*ΩD¶0æ=…ºùÂÌº`-Ü=}~
+>õÄò=˙á6={≤æ"2õæ∏»Ñæo;ø–œØ=£8•æ:ΩÄæ-Òc<öaæpÊΩ*{‰=¡3≈Ω;K$æ‹ ;rÄç;ÂW	>õµÇ=õjí==çª[=Ä˙«Ωµ™ΩÏ
+æ´Ì/Ωx¡ÀΩh4ˇ<Mm…<Ö7©ºd!=‡EºÉ9"º’πªP»≥;rfæ“ñΩë˛X>à˙bª«UÓ=sÑGªb°e>˛÷ˇ<¯YúΩW‰üΩ'À=h´Y;pÉ>ÄÍ;æÛ™›<J˝ΩWê/ΩJââæ>lè=úZuΩ†ˇæ∂‘∏èµë=Â=Œ∫,ºÕ`€="VÇ=ïù/æ§Á=Õ∫5=”SΩÖ*æÀ˚ΩıK¢ΩΩ4Õº;˚Mæ±“>KKΩ≤-ëæ.KR=)›ﬁΩ^±>O $>∂=Pi®ΩD0øì_ç=É_„ΩÏc
+Ωîô¬Ω…;Ñ=sÛªå?ù=¡ ÕΩ~{=çïΩ˜Á¿Ωh}(=Q+ˆ=Y1ìº]øTΩÅ®ïº–Ó·=X˛æCªy=ÜìL>ˆÊÆæïΩ«≈í>∞‡ΩöÿÄº=«Ω–L‚<ˆ∏æÜÉ8>±0=;¶¸ΩU*ΩÂalΩ∏◊©<˙¬=ÆâºÚÅ¥ΩÈnΩºJ˛ãΩì∆ñ=ê¬=>x’ú=‹~™<ºÒfΩo£í<\Ü3æ«xπ>I‚ùΩ>GÉ=≠6æçc˛<º>OÉΩPÛ⁄<|˚a:ç?˙=xNK=ºßî=Ìûæ§<J>è¢ÑΩt'>=ò¬<=Îœ=©O%>ãÅƒ=Aﬂ<U`tæ˚˚nΩ¯=kΩ0q;=;`Ï=˛Æ7=EG™>SéBΩ≈.RΩBw6=`Æx="Ωô1HæÕÛ®=◊_˜Ω∞fù=gQΩGË™>∑_º>∫íæßÈåº£wæıfÂΩ9#µ:µµΩ'k—>Rèr=ŸvV=#y}=W˘ΩS#@=if$ºíç[º'ÁéºÿÕ¿ΩoáîæAx4æR$¨Ωo5E=óji>ìX†> z≈<P†<wx©æXΩ‹Ù∏º˜äÖΩ˚=±æÆÈwªÁ>?·Á=+‘Æ=cüMæBF<˘›•æF9d>!‡Ωå">”¸ŸΩ»πZΩ“k;æí='3.<:|ÑΩ@ìæ≈ıM=Gßæ[ΩÚHÖΩh,¡=ƒ¸$>Gn=Ví=§U¸<=…jΩº$æ˜XΩ⁄»=ÌO*>:8ºt¥œº]ô<L¸å;Zæ]ﬂeΩ.76=¥ØøˆÈ>≈å(æﬁFæ¬ÜØΩÙ‹zΩc<>@ú=œM¯º‡	®Ωœ>∂Ò<J·Ë=û˛^ΩxpXΩ%”ΩÇ-'æ~vO=ÅΩa=Ó¸<ÇM3<·kb>hï∆Ωw@4Ωk¨="‚ΩÕ≠ÿºô∞U<ﬂÉÇΩîe»=)c≠>™ù=˛¯=Ü±Ω5Kü=H€†=+6äæJdΩ“º/	ÿ>co'>$e^=’tµ∫€≥=x ı=d3>1æ=.ºÃ<ﬁÉæ/$´ΩÈæéÍÒ>ôûHæ<≠†ºdΩ\(|=¥º8o@>jÂcæè¨ò=K≤¢æ,X4æÖ|Ùºä eæ∂>¥pπ=7ÿ>Q…º+˝TΩ∫√>Ÿ·1ΩAôΩÖ6’Ω≥DØΩÄ√§=†˚5>µ·˜º©‡çΩƒ⁄Ω9ñ:æH∫ΩÊSt<Q¡=5GﬁΩh ±>ãK6=›ƒÒª≠Yæºæ˙A=Ú≤Ü<†+=ı˚^ΩQΩô CΩJD#=)ÒÆ<|Ω<`«2<Ê·={œlæˆù%>ÙT™æ áÓº|æÖInæ3c∫îΩÜ=?ò&>É<⁄…a;…“4Ωıê=TJO>+˚Ω=…≤ºıÄΩ–ÚæÉÇe=ömëæ’•¡>ø”‰Ω>õYº¨]úΩêµÊΩõ6øÎÂzøµaz<Â÷û=‚>ËÖ>fë>l*–>s5–<‘i©ºì‰ŒΩóØΩëCqº<g)=ú”∏Ω€ºóæ{.≤æ™¡ÖºáBΩ°>ñæ§Ç˜ΩD´´ºÿëæb«‰<<¯˘=Ø"=¿#x>Q>_?®Çb?7®p=*˜Ω($ºæ6	ΩH€NΩ≠/ÌΩ§ñº]Ç∫0æÁ=@Ûå> D>æ¸í>Yù</†<ãõ6Ωa‘í=ÉlÉ=œŸ:=$âò=∞ñÌΩ¸kΩ2√7ª@H4<I…SΩ.ÀÕ=ÖŒ">ÅPŒæãµ´ªøœ<Q◊F<'¬ºÔoè=Tæÿ4íøÕ0øÇΩó\Ωæã,?¿‚ÜæÎÊkøˆ†{ø≤ü\?gòææO˘ø?ì?z`?Ãn=øÆUÌæ./ÆøΩ≈ø—"?:oæGÃnæ§K¸Ω»ã?‚	Cøﬂôæ¯h®æ@ÈAæ›•˛Ω0'x?i´iø|O„>√÷?ﬁb#Ωüt.ø»ˆ? Sg>Ã≤>—ß=ΩúÚRæS4>∏Ñ§?â¸b?Ù™>,LO>ÿ4‡:çº˛;¯P<å˜øæØÅ|>¶¡å=ö†øüº/økÿFºNÎ{;≈´Á>Ÿ%øT@¢=BZæ…c¬>ô“>˘à“>eÒúø8q8ø!ûõ>ùD{øﬁÇ6øjåÿæÎ2õæõå˛æ‚ô»>pÌø‹ddøDC$ø<ˇï>aÇ¡æJ/˜øDΩzŒæ‘0Læ9ø?˛ÌZøVÏX>£[∫ær∞Â=9∞ø≤}ƒ>:∆f>/ËËΩß÷ΩHk—ªq6?`¨(>œl÷æá|æıN1?ﬂè·>®z>Ÿ¶ÄΩmØΩq(F=TKøΩ§Ü=±†ã<<ñ=Ã= æ$Ω\µ<∂∂">πÒPø–¢œΩÓ˛< H<˛JæéøΩÈU<~Çìªı°É<f^É=›ìRæºtæÅÜ= ª	=K®AΩsB˘<3 ø>Y@c>eä=Ôh= íÎΩw∆∫Ωo‰ã>567?sﬂ<⁄¸Æ<#Æc<Ñ(wæœœøŒ”æ™b∂<P';èƒu=WÍ]ΩÅoº;éΩÈ∫É>uÌ¸>eˇî>i =≠‘¡=gõ&>˝~<ËÕ=g¡˝=cŒ~<Œ8qæ":/æêõàΩﬁà~>ç“>Èw<¨]äΩü2?aÖ<¡>~>CÇÕΩÙœ.<”~Å>_øãæIùæY\èæ9≈=Â›X< Ôæº1¢·ΩyæÙHwΩß;ﬁ‰f<Ã[®=ë¯}ΩB·+Ω*ëŸ<Æ¨<8Ú>ÛŸxæ¢äîº·¨	=ÁÁ<ñΩSnªôj=MõΩB0cº:Ω£B+æÔÇ∑ª^™{ΩËÏÙæhÛø=ó˚æBv>Ê*>?^d=3˙º;ÈΩ≠ı<=.Ü>æÁkíΩ@∑Ò=∂„AΩ[i=óNı<é}Hæµãˇ=AE°=$‘≠=éi =@&úºå◊a>˜ÍˇΩ˙˚≈=•$@æ¶“©æ£!πæ,.bº:28>{ÆrΩ4·”º;OC=Å´d=¸Ãü>q£≥>}ä=ºÒ≥tΩãâ=öÆ=˘æmÿÍ=≈¿√<èöWΩŒ>ÁUd>J]>>«H~=.%>°Ù:>µ© >’h>¿
+=‹≤Æ=∆‡}=" T>8üâºS¥øiçm>N	‹=CÖΩÛX>|˘∫=Í1Ωíßπ>≈ΩWaìΩ∞◊d>˜ƒ>§∞ºk*hΩO¨(ΩŒ±L>Ê/Ωu‚6Ω¯ç¨>~3˙=`Ç¡=¶*æ[7	>XÍ=Ÿ˚Ã=‰70ΩXÛÒ<u˘}Ω}ó—<õ‰˙º5FJ;÷å3=ë≠ü<Rº?æˇπZΩpRΩÌ£=ÊÇª ©>ÅBÜ=«À<…îâ>ZÊV=[:KæëœØ>À;>¸F4=Ω4ß>Ω∂v°=bÕÁ:º2>≥2»º?¨>»¸“ΩúÔØ9fkU>≤ªΩ‹Ò—ºœ¬Ωl8î=_™=P—◊æ %&æ' ´Ω≥/}>ﬂg=C@ùΩ:æõcæAÖ«=Oºªï	Ü>Whé=≈X“=¿wE>:ö√=Jáö>2üL=QNvª∑ÁπqÌa>VXµ=»8ÑæŸ%Ω®†Ω– >˛Z	<°≥∂ΩÂÓÇ>ÕF>søÃ=†÷=lØ=iià=:.Å>*§ΩY⁄”:≥jÇΩ.Ì´Ωç>™$.>…óº≠—<Ù`æf7>‡=Ë=´5JΩ´ÚΩ∑.æTÛΩ	6æÉ-»;X¶<ø˛µ<¸®1>4k=¶,>ÀGÑ=#j≤=íÜΩ=Ω…xΩHﬁàæúBz=@F>â≤‘Ω‹U<®&©;Ú˜ ΩãE4ºIñ>¢_=Ï!•=ê¢Ωùy(æÈÿ|Ω6rÖº>≥<)åΩ ˝=˙òìΩrh=w†Î=A!Ω\I∞=Œª>ïÖ;aÿQ=˝Üù>na°Ω±Ω
+(Í<Ø]<}Hºõ†®<JH”<Ÿ‡∞Ωt¿≈Ω@ƒ=˘À'æµåΩ¿6™Ω$ﬂéΩ’hØæ`Öº¢‘áºW"«:”˘¯<Yaº+S=wÛ<.ÏX=∂•Ω2‰Æ<NŸï<{pCΩ≥øh>:>iºÁÄ·æ˙≈=<N=HüÑ>¬ñ<( t=ø1ì>gKJæ#U=‘õ,='ª4ºj1¨=`ßìºî∞™º¶ãª©˙•Ω}æòºûay=ûKó>ﬂ≤ÖΩ◊çº!lº±ß =Õ˘Ú=èæﬁ=pÄ∂ºù~hΩŒ4Ä=â@=zÑæõlPæt3ª;%ÕªßÕ;˘&)>+ì=û{ΩI\∂<∆–ó<Œ»†æz}6<ŒÁΩﬂ§*=ÀVa=y?G<§‰Êæ…¡VΩ¬©ZºÊø2Ωl⁄ΩHπ˘ª ˇî;‡aÑ>†ΩÂ_æ>Ã]Ω@–4=ß»æ¬ÖÏæ9ﬂu=≈&æÕûxæjûæò…eΩˆ¡ø«Ö¬ºˆfõæ+•7øî.Ω™`æVbTæB®º∞Éöºh‚M;dHá=FÔﬁº é=Åû[>h+¸;ÎÑa<MòX<ﬂ€ã>∞ø?+…Hº~µÅæ;ªáæÿH=W+õΩ>˝«æ´ªÏ=∏÷ÊΩ D¡>`\æûÅõΩHáæ›DsΩGÍT<E›>ùàæÃ…ΩæÃ±,æ£◊.ºd">-ìæ≥§èªπx'>Qˇ=≠e0=[#Éæ”±ækˆæ⁄∂⁄ºã#Ω÷å∞>†¿æ>aç<ÔR;ã£‹Ω≠àæ$–<õµ<mÒæ%åΩKG;=ÆÌOΩ˙Åñ=≥èΩc0>FA≈ΩêtΩ5∆÷æ ]ù<5t >M)Ω®é»<74ß<R=!?”ÀªºÀøæJ¯π=óÕñ;ÏÜ<<\Ÿ>H¥(>Ç˚6>úP◊<Éö5ΩVe˜æC.˛Ωú2=º˚ΩXIÊΩæjxΩ
+X£>‘äÚ=$+Ω˚rçæw1>–€˙=Zªõ=f˛=“9≈<ô=û¯Aæ}¨æºı†Ω9¨==´∏´Ωiµâ=‹TÎ=`õï>÷)=1ÚÕ>IWíæ%.÷æì˘QæL5ºWï]=§ƒXΩ∑≈Yæ!Õ«æY˝æ£•æ∫{ÛºZo‹:2ñ<⁄ˇóº.yü=êhˆ=∂=>RI=/Ω*]{>¡£∆ºÀÛéºF∞Wº≥~ô=ôu€æX@Iæ˛“JæPüë=§(õ=uÔÄªqw&æ”5Ø>êΩ1æ†{ˇΩæ≥ﬁºÁ*ΩÍÍæ°-8=∫WóΩh‹=·õâæÖ√¬>?4“=è‚õ<ö÷â<Õ‹†Ωy)QæIx>√»ºY¯r=e’∆æ|5Ω<∆ºGxÖ=ø…Û=I+∞=·ô'æ√æ=)g´ºvÓJΩ≥∏⁄=!Ià<SkÜ;ù∏4Ω(7ë:sº9◊	8æ∑öÛº‘Ú◊:ÃN)>ãX+Ω/—=≥â⁄;√™®Ω≤EÆ=ÃÍV>¬=ZºÆÓY=ä‡≈º™ﬂ–Ω\ı	<Z‘=–â“<wËΩ©M=P <·Uç=EdÄ=*^Å<&¶∏<¡˙≈ºœÌ=ˇó'>ÖêÅΩo≠=-d=1!ìº∞ÛãΩ∂B√Ω¢c¯º…˙Ÿºù°kΩ7Ûº»÷°<Ô–áæ
+ı<J°<˝^
+æd^Õ;ûpΩ¢tëæÕ >l£ æ>N=-K,>K·)=PX=Ωã˚ =p`=kÑº—qg>°ù◊ΩÅé=!7:;(Pº®ÓÎæ84A>iæ/ªjæI$æÒç ΩØ—>Ωâ≤“ΩÃú=˙mUæ™"k∫ÃCŸΩç◊±>êÆ%ºås<$’Qª°7ªGœó=Ònæ•‚h=¥qÍΩiYæ=`Ÿ<Ïº<∑Î=˛ÕÒ<˝y©=.'>Ω¨ªº≥ã«ºª; <≤Ú=L‘;f∞µæ∂=Æ◊ªBY”Ω>«>¬N¶<÷;ÌºìüA=eæ¨•ºM1Øºqcí=z‡ÚΩ.Ãº%Ùú=ü$ùææY„ºq]©<~πººH&`æ=~t=c†æ•HóπÙ>≈èæ∞¬ˇ=…Ì<úrïº&wdΩ**ˇ<´=æ%"<3IFΩvìnæ^ÍΩ ∏ <∆wû=i¸Ãæƒ™¶Ω≠i=`"œº2{çº–êÇ<‘¡“>1ïÙ;G;ú~æaÃØΩ'H>9t>˘ÀèæHœæå%>˙ iΩom⁄æ9ò>æûé=öËéæ^b?æmÑΩ
+ã=ê#=÷∫§<áôæ¿I>!@8<z∏=ÆU®>qÅ;¨4˝=ååÚ>`›æ∞ïæIe!æiÈ˜;X,≈<9òæ[‰<sïΩ@aÅ=kÀo<≤ '<ıfà=£Nû=R∏=3fÚºh>'N1>Ø	»ΩÇÎ º⁄%M=Ò‰æñ ËºjS»>*Î=™Î*Ω•ÏÏ=QTÑ>¡Ó©=ﬂ∫Áº L=˝HΩé
+ñº∏ï<tJA>¥≈>&Í>É•'æY¡Jæòª_æâçh>y‰·ΩÂ–îΩ∞∆>îr¶ºï√aΩºCƒ=∏fDæ≠;∆Ωtı>*ã,=m7g>CºG=xÿ+=ﬁ`C>øÊ©>|n>è•>◊Æ-æ=Çæ‚…ë<bÍ´>Aä6<ú}>R(æRI æ˙üæZy,ΩÓÜa<S®Íº’ì±Ω≥)æå•«ΩÁ·\>≈¸6>óß·ædÄEº÷Q=⁄àæQ‚ΩGΩ[=NF¶Ω„F=#æ˙SçæQMÍΩBZ†æ|ö¨=∑Zâ>›„ﬁ<…HæQ_·>à8ˆ;t≥_<*JáægqΩ±›^æˆÿ>Ã°Ωë£ßºËæÌ%Ω∂Îˇºxt∑=úM7æfÇ”=MA«>ÆJ¶=ÙÓØ=í´ÃºÚS;Õµ£ºˆH_ækvw>‹A÷<M›=<Y5`º6H0>¡˘=Ë÷@æ{¨æƒÓ);"˚ã=ı®=
+&:√¸j=VN=Ù∆uΩ0*M<›Ì>¨sD>V®>à#>\_•Ω„ŸΩìµÚ<˘>Ü^ä=fÅ0>±¨ó<˘Ì≤Ω®_Œ=9ê=Dª}>∏6>»…>£ﬂy=ê¨"ΩFÏ<Á∂=@ºÚìAºU—ΩÓ?<◊[ôæπòÔ=Èäæ>CMáªœ¯Ö=(∆ÇΩp$≠ΩHù>6(!>byo=U´åºÒx4=#“;<Là|<ˇÍ˛Ωü	æ∏ÿzºoÎìº#¡@ºj6πΩ HÎº®\´<8{©ΩG„=;x=>K>Ù
+àΩhÜ ºd´™Ω>úˇΩÅﬁáΩ¸dûæ7Bd=r.˛>ﬁ·ÕºT≠=æ_›;/=È’>›∑D=¯ÉE=•HF>m®º‚pæmúsºf° ==Y∫ΩÎÄæxÎO=zÜIΩ6œú=◊´¸Ω+/F>nÇ∂;ˆN>=ä†=
+÷ª<çOã<…";<îùè;c'=Ω,ÆΩxìºÅá∞=L‡F<Í7;åã$=(°ªÄƒ¨º®Äæ∂´<{b=å»‡Ωˆ¸_9√O†º\˛u>p`í=KÌΩ<∂ÑæH‹.>¸Í:¥ù>qôë=%.<Xªß>#jÅ=å˝p;Õ˝o>Êïƒªj”ªå:=·±Ω∫‹ï=‘Òæ<å÷<<ñDæ\œ¨ºøïDΩ®®˚<ã˙Úæ∆≈‚<cE∑<∫´™=ù¢¡<2ú™Ω“††>≠wΩΩá<øÁã=ñÿ=}ò=Ìè>)“MΩ(¡6=h≈√æÅ¥´=ÿ“ÍºxÀ¨>˚Ωéœ‰Ωs<æ,Êç>U¿q=·¥ =SÜ;^_!=5;õÉÕ>!ËÃ=◊íz>êπÆæ†uœºîñæGt›=3‡=îTÍ=kÒû=œP6ΩOÜ>íµ0=£≥<ﬁ°¸=·À‚ºP≤Ω‘[ÒΩ∏>^ªèùD=&‘K>I∑ =ê˛=•`+ætZú; êΩﬂZôæV’î=(ƒ-=⁄SQΩ˝†’∫6:Ù+•=≠πåΩÆ≥9>˛ÍÊ=–Îæ;5>™ÃΩÕa>w,¬>Á—ΩjÓ·=êZ€="ªï ãΩ \õΩ.=ª›æyî=_==ï±=F˛åΩ{U}>Bˇä=‘Næ;ï=z∆Öºfˇ>£-èæ“óæ¿b?&oòªOC>ªñûÓæ&0æ¬Zeæ¨œö>∑$Ω˚Ù‡<Ÿ≈Ωcí∂ΩÃ$∫<˚≈ŒΩ√å™<ãÒñ<ñ=ÈöÚ;€…^<=ûù=Eˇ>˛˘ºñ˙ÇΩeÊîΩïö<üöë=o`â=+VΩ0À=ÉÔbΩà?œΩù–ñæﬂ-≤ΩÚÉS>}f¶>†CÌ<´∞ÇΩm»(æ3·<Tê¡ºbD™<Íe=r=™>úÁM>·;QæTŒΩCHCºÃ∑ı<o¬Í=<Î<ΩÒ∞¬Ω‚M†ºUì>f_Ω!ΩÎºç>XQ=¬¶æ=‹ÅÁΩ˝ˆæVhdæÂ®Dæƒ1◊< äöºˆ˚ŒΩÆ >úÓ‘=[‹=ÛÅ>/3VªM!d=∆˙>8#¡æ∂¸ <œ++Ωmƒ~>n…∂=çëiæYœ/Ωm•…º¡¥ª2SÖ;L#>∏ê_æÃ:å>0W-=ñê%æP|ÃºMÁwΩHUW>œh=Z=|LΩ‚ÉΩ<¿"8=(˜∏Ω@Fo=mì?ºº„;>Ag4=˛äËΩˆ¥=ˆD->PÜ;Ê#>ÊFçΩß”“ºaƒ>È†©<ÌOë=íäº	ö™Ω–«_ª¥¥Ω”k,Ω°`ªX’ æ
+·õæ‘¿•<$ã…>ËfD:ËXΩ+n©ΩÚÒ<ø§<‚ˇΩ>G•û=è>µö£=r›⁄=‹Ã®;Áj3øÈ≤æA‚8æÓuﬁ;Ú^Å=zö∫1úQøÃjΩ „¡º ∆Fæ'9><:Ùí=M¯QæN@Ç=®ÇΩ[!>
+{Ÿ=,_ÅΩ˘È>…°aæŸÉ°=ΩÌæÕΩöººyπΩYõ<j¡7æ@ˇH=Ïì˛=ì˘≤ΩÀËA<øQ2>_¢–Ωu=vôeæR—“ªh€Ω∫d∂=C™HΩñÖú= 6¬>ƒ≈ç<æ?ÇµYæql©Ωr±∆æ«è+æüç1Ω'Ωôt…ΩÌ"ìæ∑HëæXñ÷<–ÁrΩpÃù=÷éÅº+Ñ.ΩMr>¿µº+3Ó<ùÿ-Ω”•æº˚íÄæHsºÚsΩv¯iæ÷F0Ω&	=Z<SËÄΩöLK</†ΩGb)>æ‡±>mÿ6Ω±a>≥p<1¬Z>;=-ÑÍΩh[û;V÷Ö=πñ >‹å¨>˜S…º^ÖΩÂ©¶æ'[S>aœŸΩÛlÃæN“ÜæóáŒ=ÖH’º˝ˇÏ<¶‘æ¶È8πl÷ÚΩä1Ì=£óÆ<¡∑Éæ$êÕ<ÌË6>∂6‘=¥Ü7>ˆÅÙæÛæﬁU“ænË5Ω•ù>¸3ÂΩ_{ Ω∂ÃdΩÂπæ˛.Qæ|D-=◊∏=wU=ä,êæT}=⁄Ω2∑ö>∑-´<∆ºp≠æ—¬Ω`≤AΩº⁄Ω9˙a<±öê>2–ΩQ»æ√9=
+‡Äºn(≤Ω^√∑>H¿HΩ>†}>€\ŒΩ¬’œΩ{jæœìu=≈3“ΩøÓΩ¸–(æ¢MTΩÂÕ=O"Öæ§óÛ=¥˝Z=pÅLΩ∑qŒΩ1Ôuæ°ƒ~æ`>¬K>æE_‡Ω»í-Ω9X=<S¥=SªΩ∆,åæáÜªWÏ;<d<-æN6(æﬂ∞«<hBâΩJGÉ=M±ºGC¢=%eP>\H0;Í¶=¡D|>ô¢&ºDÀDΩª5WæN∞¡ΩÂ/F>W«j>¶˜Ω¯X';£ìΩœ¶´<üª∞º`◊@æ±ùÎºB_ß=¬®·æM%æ îΩ_≈1ΩyÄàº#a-?ÇSæê>ûµ> :¡>´>G‚?•πs>¯Â™º¸VºHıÏΩ∞åß=ñ<éΩNÄæïKø;d=È§y<~˛∫˝Q=c>_	Æº∑⁄ú=&˛>_pv<˙£.>)Âœ=ÎöΩ<Ë<ƒ'äæÁJ¡∫∆7·>Tê¢=ﬂ‡'Ω‰Fæ‰ﬁ=ÿ,ZºÙû∞=≈>ÊíÃ=zË∆Ω•Q><-ö==ÉæÁcôæó‡
+æÛA¬=zèæúô=È‡∏æìπΩâAÚ=÷>ïÎ*ºπ·PΩ¥Ω]òT=oÕÜ>_[æ·èRæÃÕÆΩê'9æ›¡jº¬u√=’@æT≈>pô=’»>5‡∑æ∂·áΩÁœòægó&<U˝ºuß6ΩpßU>ÑÍªlL.>Ó*%>?’ª<,∞åæm;∂::HóæêÂ∆=Nô=ÚæUy3æñ>ÔÙ@Ωêœ¨<¶»*>F·=®!ø‚ﬂ<›Ï+>•èºÛ	Ñ=•˘î=Dª~æq7>ΩPæhf=ˆ&Æ>~ÇΩE…æ’1ƒΩuˆÇæË®g>2=ñ=≥NæÌ`í=T,næÎ∏ˆª4∂$>Ük>ö$>•Ó1æÔˆè=“n¿º'O)>∞9}>:∞9∆L=≥{wæŸ≈Ω˚;Ω(6m=>¯n=¢æ˚æ–÷(Ω°ÍJ=Ljyª≠A‚<tûTæ∆ÿ	ΩA+=ÜBâ>˘i~æE⁄_> Z>–0ïΩüSJºÇ*={æ};ëÍé=
+H
+>√&!=ecˆ<D∑æ|˜ÆΩVL~ºˇÚq=ú
+>1Q:éÊMΩëp*ΩL=@Ω%’/æoJã=)∏Ñæû˚•º–BÔΩÊI¢æ¿'>-sΩÈÄ›=ïúªW7Ñº√[.>5 ±º∫…7=I[˛=∏l=»ò!=mT>7‹ÃΩ:˜ZΩ˜ÏΩ[∫Ωˇ∆>Â†>V˛íæ*‘> Ë∏ªj‡Ñ<ﬂ»û=JAàæ¡≥#>Á_ü=B?Û<ùsi=≠=l ?ê[æÒ˚%>a=≥Ÿe=ö·ó=AÈ†>ıYÏΩâÅºÑ˝À:û;î>»4=.5={∏‰ΩÓbVΩ¬¡s>'ˆÒ=∞óa=;ŸΩ>˙w≤=z$Ω"™<Åw{Ω,ÂΩæõ“Ω9ÆíΩﬁbΩ÷R¶Ωê‚(=æ˜º«æ‘RtΩ49&<  º6.ã<∞?‰;\ù"æ…	>æÀª´<›æ=„û‹Ω-ÏÅΩªâ>Ú¯π<XùAæ˙Ñ£>mΩë=YeØ<_£‡ΩµŸº‘î≤Ω-N'=˛G>:·«º‰¥Ωxm>nØΩ∞
+$>‘$öºËy=U˙´Ω–ÂΩ3v;hû-=Ä≈EΩDHP>“ù2=“ΩQÌ…Ω>¯=í‘æf˛„º'K®Ω‡]æ¡úX<^ÛæH~∏ΩB ==ôy¶ª3>˙n:¬ˇ!>j≈ΩÉﬁº8ãq=˚ñEº-ÈΩÄ«Ã<æjà;`1Ωéú0>¢ˇºoÿmΩ”ÓΩ˝s÷ªLC=n≥-æK0>ê¶V>öY¡ΩÏKãæ≥»ãº5¢k=VÃìΩÙ1…=ËGæ≥A%=ùÖu<≥¢í=c>†÷1Ω5^ÊΩÅ§ΩÊ$©<’Ó0ΩÉ–<$6ÒªGKºIßÑΩÙjù=,†ºä”>¬ìlΩDå‘=´èbæ:ΩËO˝=h$5Ω: }<‹ô‰<bö¿=l∏º≈rêΩ◊7=Wy‡ΩP˘=DCæπå>kRΩº£Ωd†Y<•|æßÃFøÃ‡µºl61ΩáU9æ√∂‚=6–PΩ4uø7oÑΩ∂⁄Ωæjgøl:7= yæÛ„6æÚUΩØäàΩNêΩ=›À<êä?æõ/?Á}>$$fΩﬁÚæENÓ=z>ZÖ)?lX=©‚7æJ_Cæ¬†>⁄⁄â=vé>
+Ûæ8’˛ª∆æá>£êLæx*ö>ßÁ”>œø≥]Ω^p”>5*æÆäæ/ﬁ¥æ±ËÏ<@ãLºôXﬂΩıÖUæΩ“ëΩ‹Ò>=[6€=«ÊÊªÔïønKø{k#<éÀ>´mã<ÍÕΩQ`>¿ˆºI‹s>ß æ‹Â]=kî<çz!ø_¢È;g€“=Á>
+óΩ©jËºD6 <Ω])æ
+îc=ÎÉΩ˘ó¬æñÏñ=Ö[ =
+€ãΩˆÉ3=ûô?
+Ãˆ=Fÿ©æÄºΩ€˝Æ=±˚JΩ∫c–>YJ√=å	Ñ=©v€=Ñªææìyú<aí&æ≈* >ÜæG‘Ωäpæˇ∑>≈|>UÊ0Ωâñ≥ª]>Ô/==ÔÕº=#hŸ>¿±∫
+–d>’ß>Oã©<Ÿä±>—®Iæ)ú˘=∏6>ñF>3xE>Ú"∆=ΩQ=ö˙O>rs±ºD°=óomΩv‡ˆΩ∂à¸>öµÏ<„î¢>?‰=’Wp<ØFºΩq¨æ®PTΩ( ΩKo…Ωn;ºÃ<Iì≠Ωhà£=Ñ<ÆZæı™>¡Æ?ŸÕæ"hÍΩø6æb—ÖæÔvçΩÎ™ê<VÜMΩÖuïºY“6>∆>Èæ¬\ª3AΩM‚°æ¿ÎæÏj,>fpùΩíp>wG^>a◊ºÉÎ"ºœ˘=Á+‡>R∏=ûÓ™=6*>ºÛ–º‘≠æR–Íæoå=8ió=Iπ∂>$ˇæ=cÿΩXzÕΩ3‹≥ª3ï‰<˝çﬁ>fÀEæ]ò∫æÄ‡(=*ñ Bonnx::Conv_86JÄ|3rø›åp¿ÎAE>DRføßoTø‰ô˚?{”>∆XøåÄc?÷–ø£˙'¿†R@^#ØøbøgâKø«]ø,T•øÜÕ1?ì6ø#ùáøh…r=‘>ønÖø€⁄ø»}Åæ>Z=í´¨ø,ÕmæY¥$ø4:øc„±øI£}ø*ö0 Bonnx::Conv_88JÄ03µW>$ª>eOΩë®æ8/√<æÇ|æMºêΩ˛àLΩäﬂºÙ|ºΩóæ¢ΩôEi=l‰º	äóª{-Ä=¥
+ΩS6†ΩÃ=Ω#—p=',º‡÷ =Ä¢>Z-æéÌ=>æpñ=!(—=Ë»=|y…=˘»Ω‚∏ƒæÎ{9>»Ó~æf·?ºÇq<·ŸΩæ´Dáæ≥∏=="ﬂäæª‹q==ÖûΩå{≤;@ æ?µº+æaæ
+=áÉèΩ ¶Pºi^=™´ï=:<3üΩ¯æS&•Ωç%ä=¡”<[ç+>9™è<ﬁ&ıΩà”º–aæºXsQ=-‹#ΩD4ΩB˝<Ü}Ã=SÊΩÒŸ∏æHÍ¶=M^}æî%Q>¬° =ïúÅΩOè‚ΩÃ¿=Xx?=Tâ«ΩÒw/æ≈aΩ∏Áƒ=¯è<≥pu=˙®æ∑˚Ω5DÖªF–∂<º‹ÀΩÇÜ?Ω›ôø=y‡ï<TX=¶.ÉΩà.Å;⁄Oº3ìq>
+q1>@yãæój-æ"‘ô=eæ}x[æ&V;èÎ»ΩÌï>∂mÛ={t≥=8ês=îæ‚◊Ãºp(->·‚3>Ω√≠o>b§=Q∫9=‘VæM„pæÏ®`ΩôΩœNë=ÃUÌ={*ÎΩ≠_{<:Ωpáú;®±®<Z{€Ω(EE>5m4æ7ñ>x®8æSø=g>›Ωr¬Ÿ='R√ΩM$>KD>5‚ÕΩ;xlΩÖx+>∞sò="´	æpÿ æ4∫N=∞B8Ω≤›>%Äæ”º
+æ“≤{=ê<ØΩu¯#>ØΩ∫;è˛ç>√ÿ$=+¿¨<√aÑΩh?ﬁΩü{>ôø>{–æÚvX=ø«>ﬁáXΩ%“^æ]doΩMΩ5LZΩµÊ±=∆rΩ‚5d=ä—=æ‚Òº-í=≤°â<mù=|Ìª•Îôæ‰>-:≠„=¯˛#Ω¥À¡∫,W+>÷Ø…=(ËÈ=G›Å=tbﬁª]æàV=ÒÓΩ%ˇ{æ˝P=B}µ<WÎ¨=1|®º8Gñ<¶Ö≈Ω∑t€=Gµü=Ω->ƒk7Ωÿ{Ω π‰<?ÿæ2¨º»√û>mkΩæ¨PºarÆ=„¬‘º.@í=
+<ÛZªô·∏=¿¢ΩÃüDΩ~.§=≈[ºæ£ﬂÖ=•|!;ïö˝=;¨<ûŸÃ<WÃ—=?QiΩõ«Ω¶a=fNÊºdu˚º˛Ä∑æU9Ôº·ã=Qjd>KBΩÓ1óΩ'Ò†>\øÍΩ+ππΩÈsgæ∂&º∏=æÖtæ$—Íºô∏º¶dÕ>)©æ∫îº&>õæ–YÄºîôG=.RvºãèÜΩÑ'=&:=éé˝=ÏMº)Ïcæsç¬=on°=ñ =ºê∫ãΩÂo-æ	∆K=v~2<¬”ê<Åº¯™=èî>ÎÆ¶Ω‘ê…ªR‰^æºïôΩ+`=ù6ô>.’—ΩÓ+6=Ïi>?ıΩò$Ω¶Îı=œäg:Çƒz<ä¥≤Ωˆ>˜œ<ÃR…æ	∂RæΩ÷Æ>*}ë>Ã©ÑæÁØ±Ω¨4aΩóá’æ◊«æJú⁄æK&cΩ_Ωä>øf5?Oƒ>r=Kr≠>}Ûé=Ú¶Ω4ŒÅ>≈„Åæ≈˚Mæ=F?†⁄o>HÎµæéŸËΩÕ)ãΩÆøtV?øñ>}æ”5>õe¨=ãÇñ=‰≥Ü>ËŸ¿uÁÁ?”<@¿´&æû?‚ΩF->
+Í≥æÚÂß<â…æ"Œ>KÌ–ΩæædΩánøkqµætÀ>ŸG>Øâæ˙;π¡n>vŸæÓW’æÿh>í:!æ#ã=∑L9>X¯lΩˆf%=W¬>,#›æf=ææ!ñ»ΩNñ‹>˙©û=Òô!øñ
+æ|>=∂T>	ë9>eq◊<ÙPøR∫º¡„	=F?ç¶eø`N>–4ä>ZKπîQ{ΩÎÀBøÊ‘°=ìÓ>``Ωª˙ƒçΩ¶~Ωá"œ;ù≠>Bª3>±rOæ+O»=ﬂ¨uªû[cΩ5Êæ_l›=lñ‰;W¶	ª"–˙Ωå√≠Ωo@çºÜ+<P˙ÚºX';+Ôº⁄¨ZºÖ\îΩàZ>ÅÊÉΩüDΩ	W
+ΩÅªÇ“<uÀ<ÌãÍ<_G¯=	BºvI=é∏;0Ñ·ºC≠_ΩØ¢ºtEÊ=&>±º&¨NΩbdæÃæîú¶<´J/Ω∑&≤ºÑ{âπg<È`T;n2¬=iòª≈H=âS√=|á >X¬D=€ÆÊ<o1=ë<H≠!= §ò>"ªW=@*=ˇ¬≈æÉõ®<¶#çΩE:Ü;gÉ<Úzı<8Ìë=A<ıƒ	=ˇÍÓΩö‡6;)•ÀΩØgcΩ9CΩ9Aºb∂9=ï	ºy¨œΩP+ΩæCsqΩ”¬⁄ΩIl_=S¨Ï;`≠ΩÆø‰Ω—>ÜΩhD=Fì#ΩÅwÓπ˙(Ü=à‚k>=rî;€ò)=ÿÇ=”nêº
+[”Ω®ÿ6ªõ-¨∫W∂=∑ÚÖ=≠∫<Ëöºp}w>	mÿ<}QµæôÑΩÛ>}»ÇΩ0‹=ﬁπúΩ˘˙ ΩnL>æΩ5c>MOæ>€;-@ùΩ$1BæaΩ‘‰œΩ≠S¨Ω∆ó1ΩÎÿ=8Sæªõá<õœ\=phÖΩ¯«Ωüµ>;Ê¡∏ΩäÙ:=è°>a- >∏Å=⁄VîΩZn,>l‰&>›í=GΩG>„˛2>ﬁòîΩU≠º”;æhµæÜMΩó=∑ºï£Iº$;ÑΩŸΩ–Ω–9cΩ„ ÚΩeÉ6>ŒP=ù∂æSyz=ÿkºWå?=¡qY>]˝=m"Ω7$"Ωó	∂=ÙzéæuUVΩ[˘ææ›ËªT´¶=´CFΩÎ=∆.V>ì»âΩîm>x
+¶=cãæ™ >eCÍΩÈD˙=…~p=N_\=”˚=S¢b>çÚΩ˜}fæZ≠Ω(ŒÜ=v-Ù<LÊΩx0Ω&9YΩô¨ŸΩM®„ΩöÈΩ‹ñπΩ˝_c= Ï∏<Êé¯Ω˙“"<ÆÇ=t6æ+“Dº“Ø= »¥ªüïπ=°E†ΩÈ	æ—ê∑<§√ÕΩøw>™3=A≈'=ÖæΩ∏Ö|ΩvjD>çëÆ<Y¶ùΩ∑íH=Üé=b)ÄΩ-ÇÑ=Dñ=Ï8MΩx^=ûGΩæ1VΩ3
+Ä=» VæÖ>}ÜîΩ‘&Ωù./> ˛àæ3ñΩ∏ÍÙ=qd8æÁ£>7ãI;≠9c=3Æcæ/˛c=û
+ÿΩaDF>Jø:>S«æ{3º…óºBS=™3Å=˙5æ3Ô|>6Ê=o”ãΩ!Ö*æ≤L™<ùí=º:æQ;∑xDæV≠å>Zi0<êI?∏Ñ: Ω=¶‹º	ï/ª F=!T=÷%=h8˙Ωàœ(=Ö^>@»]æ§.Dº{Ï<r—æª [>á™J>(v\æ0^*Ω[◊ûΩÍÀ=ˇ¶E=îΩ‹$>Æ∞=¿#>ñ]ÔΩ∆ÒÅΩ’R?æÇ'$>¨ÊF<;∫Úπ@PŸ=YÌ}=rxà=OLC=%:n≈ΩT´_ºG=ˇ<;œ<¨èªqƒ=p`ΩØö:∆Ó=“6>%"<=”Ÿ.ΩÀªæI»ÈºÈeæ¶|OæµBB<|WºﬁIú=z
+	=Bêr=ı∑æbΩƒOº/≤>òΩé„ç</\UºGÃÏ=æ:=ÀZ§Ω*[Ω‹Ï•ΩM'ƒΩ*‹<ˇtf<,æºó_ï<>@õ=>∂Á=¸˝<H\6=[π=p=ÃﬁıºZª∫ΩL,‚ΩFD{ªÏÅΩø[æ≥óÉ=Â¬>y©<íuΩ˚FΩ¯÷˚ª:Á«ºIˇ[Ω‡ìænìmΩê¨˙>aáê<P}±ΩÁÆ˝Ω˛¸)ΩÓ[Ω¡qÓ:ıwâ=Ô≥ <ëA>≈$>æéº]DΩI=WRU;,Üg=Ÿ>ΩI˙⁄;io{=øΩ„;¸“3ºYæ<KI4Ω»ÔΩhKÊ=8&º\†!ºï≈Ωä®6ºñÑáæ4ç§<‰`Ωü~#æêhh<åS>—¬<íC =∆À’Ω …>˝dËΩô	>ÊyàΩ¿∂<÷ÇÉºzhëΩiCºfß€Ωw⁄>w·,>KñõªﬁÔYΩπIç>◊ÏI=®9
+=ñzæ)†-æ∫êå=)Ö3=Â≥$æ`Â<†œŸºä≤=ø¢>T±ΩÚTç∫.>Â=ót•Ω£C–=(¯yΩŸöT=}PÆª∏˚8æÿ!RΩRkΩ=¥"◊ΩqΩ‹=%o˙ΩUÙ™º24ô<.≥i=ë≥…=7D±= ˜°Ω‚L!æ≠I>º[Ω∆F–æ√Ñ«=˙}1ΩÎ?Ø>ûë	æP<$ºòÌyæ≤Û∞>WÂ1ΩdÆÎΩÕh!∫Tá<æös>∫â<™˘<øæW∑æ≥è=êg>ﬁ}væ^G¶ºFØ*Ω≠$ΩT˚ñ=Ò∫>ôˆæÕ¸‡º8@YæÿÓΩ¢ ﬂΩì•ùΩ'ˆU;õ≤b<ˆ¢Ωy T>›æs˜1æ0óªBäºJ!à<Tí>ù< <∂@=>§»À=∞÷ªﬁ1zæ–îw=∆˛'ΩÖë=D¡VΩN6µ=TZ
+º∏-qΩ∏›ΩÃö"æ7õ=´A~<õæßàC<…cÀ=(õΩò¬Ωe¶[<®º-Ûôª√W=c#Y=<®ôΩz] Ωn∆Ω%NÜ=éø{Ω…ŸY=˘^n>ﬂ6æt£¯=ÍU‰º\⁄⁄ªÚç=46ﬁΩìw÷;aÚ+>n—=≠ÅVΩR˛óº3$ªΩÂ$æ1Ú>¸º;´˝ΩÕ‡Ωß""=}Æ>áıΩŸÁ<æ©ªœ∂'=e†ΩªDºÕæ£=ÓNéº+j>ÎóΩ8$2ºàπ˜:4>èˇΩ≠û§=ºêΩ <)Uº·S°<ò’<À‹êΩ:lW=q§	;£˚<∂L3=ÔÇtΩƒ#fæ|Ñ$>ÑÕ=πÏ:=˛ÿÛΩ¢¶åΩ‰‰õ=e7îº7†=ò≤æÌ{>yQó=km>>ñ<wæ<¢˝<yABΩY}£Ω›N¢º2ôgΩCø=⁄
+ú=übΩ%qÈΩ3ÎHΩUïÄ>∑ÌïΩvÌ=™>>å·ÃΩ4>-=Òå=ÿ0ó=ì˜˙ΩM¨óΩIWµª·¶æµõÅ>ŸùF=≤… >\ä=lykæOfXæ6‹=#.æëp#ænL)=ÃCæˇ={Ìæ_„üΩ◊ÿ =zøΩ''ºP->îΩΩ†ÿΩ-√º> ˝Gøxùäæ#[õ=H‚Ωì@">?^æ_S2æ È¶<˝h‹ºﬁHΩ˚&'æ;T]æ`.iΩ·@'æÂ¿0>xH±ΩR´’ΩÃù^= πï=XöΩ;qÆæüîY=ﬂ⁄ÿΩ‹	?<ôÓÀºêV>Øπæ4†p=Ö˜=—†îΩl%Ò;¿˜x<∆è3>p8E>'s‹=‰…=>"¸æ°gΩº>^A=¬PÙΩôÃêæd/>´N>ÅBæûíÈΩﬂoΩ/Z?ºâçæÜt’=–.>æÕ∂ÚΩET<nÄúΩb±¶º‘«<AÇôºÁ~=çÚ>uÖô=¥ûΩr˝";é‰Ωv”º=Pæøê9=Hç∂= %=Çàæ`ä!æÎñæ8 ù=ƒ+À<ÕsÙ=Ä&<¯7>¿Úv=˛Á=;%óºR„à=·ﬂ<ä7<>gsΩ»£=°Ωív∫Ωz¶È<˛Æï=çÑ%ΩFyæåº¬º)Mæc/	Ω¥ºFΩûTú=π?/ΩsÑ¶:¸0=¶&rºo˚∞<cU≤=ƒnæπÇûºˇBÄæñˆπ=È“;pÃvº"ÿ1>Ølª/gD>•≥>æ‘©æÚæä‘ŒΩ}gç<§‡“Ω≈F#>ÙÄëª—Í‰=·!FæK∂Ω©ggΩi%=ÜUÛ<∆7B=>í◊Ω«„ΩÂ£ΩÙ/Læc"™Ω˜—–ΩXΩ
+õ=`¸2=Ω¿ÖΩâ‹Ì<EˆΩ6åΩ@Ñ$>íΩøº>%”F∫ﬂô=WWΩ≤¯x=!qSº|
+>Ÿjö<ˇl¨=´‹ïª“Ø3=517ΩËu”=ø©∏=HÉπ=ø‰,æg.µΩ]B√ΩZïΩƒeΩEØΩà#Ω0´h=K˙GΩh=u=˙i=O¢Ω¨ä∑=†í=^ ﬂ=ºQÄºî¶=<·ï¢=d(Ã=B;ÊΩ¢S$>\≈’<m—mæAÕ(>Ü&U=ÇU'Ωïü•<:ìΩ∂±ﬁ=t±ΩÎê?ΩÃ|=-åπΩj9√<´Ó<∏
+cΩ—èÜΩ`Ã∆=h@Jº_µ·º|/=ë˙ÂΩO–›<ı7¨<ˇB'æ„YÄ<.ÔΩB|±=Ñr=sœ¥Ωeöõ=s™≤Ω‚SâΩ@[æ6ë¯º√!+Ω!¡==€ï´Ω4Fñ=Zèæ˙ã<ôW*æ&öàº¢Ô=öj>+∑ΩƒKæOíIæ‚¬≠ΩW3>‰·õΩ^∆È<çÇ¥=kÂ`ΩZ	=¨™®=ï_≤Ωoyp=ùá;0≤>¿ª+>ÊWΩl-=B/ΩÑV:<Q“ƒΩC,U=úﬂÍ<yÆæ=F§Tº…6CΩÕ8>î±,=Í≥ª=–∫¯<^™ê<DÈ<•èΩ≥%<Æßª¥´‘ºiNË=Ñ—=õDæ—qi>Ú]ù>ìXùºîŒºﬂ'æçåd;…◊=ñ»8æ-'=¢º¨◊+æ1∂=(è&æ˘ø ΩÙÆ±=T¢ΩˇoWΩáp>√WUæ˘ÇÅ>ï[Ω¯$4ΩMd]>XPæ-…>êÃ
+>£¯uæú'Ωz¢ˇº¢àæ§œHΩëv~ºaœcæ¸‰√Ω2πU>©Ä¢Ω≤CºôùøΩèG´=‰}&=°„æøR=Ä=
+Óä>E≥·Ω9ævÀE>ã.Z;‰=û®æî:”<≠{	ºe>õ¢∆ΩQeúº dõ=ZsÍΩ™⁄>¢B>⁄ò&ºòì={Ò7>Ω˙‚Ω•î=´‹=j=æ§±ZΩÒ¸a>û†Ôª˙Êê=∏ΩŒ(÷ΩPJsºt8sæEk∑=é≥ÒΩÎ~\>ò)Cæ∆ç•<à-æ©h<+~è<òë=˜{Ω…ﬂöΩ?ﬁæàGΩ]P7>˚7>2ÍΩ«fP>UΩ;.uæ€±G>ıöb=wTí=kñ’=ê<>Ê>_"îºõ{´>*Ã<∆7x>b∞=À>9æ±¯ΩÒ®¸ΩI“>™÷,=lÕ;∆—Øæáº<”™<˘√;Ω‚•è<#Ü=
+¯ææz>>ınæ$°Kæüw≈=.ñΩØC>´ÊîΩß=7>‡-’=ízqΩ%æ"õ=KM∏>LÂõ=ºúiΩ?3ë<€Uª=upÙ=eÙ•<ÒK?(¢>µâøΩ4˘|æ"º8<ﬂ¸nΩ∆Á =nXΩ¶≠óΩ√ŸΩ>Ö”∆=\P<CÖΩzﬁöªidyΩàw>a>hpR=4¸dΩYhæ¸7'Ω0Àæﬁí<Æ‹∆<ÄÏ=ŸÛ
+>H#Ú=Aª#ægñ;Û°F>œ<ÒºÑÓæÉ€aº≤¬j>∫w=Á>¡(>n±êΩ∑ë0æ»R>q_Ωœ	>êÂæ=ËÍÖ<ÿ{ >	C_=\ Ω’Ê˙ΩE¡Kæ„ô≤º¸∫3æs;ÕΩ?=I<f.0Ωö[y>—≈5>K#>F«ÍªÙ%ΩÃ˚Œ>ù◊<»≥$æ‰µ>:Rª“„Ω«{ø=?
+ïΩ›Vî<BÊ=@ æ{n˛Ω)hì=+tÑæ$}æäpIæz)õ<!◊ïª<9ˆæ˘c«=Ñ=óaßΩ∆"å>∂œX>5¨ª…?lΩ—Wº÷≤ ª˜¿Ü>ΩÓ>ÓP≤Ω•±˛=≠Ω’m>£f8=Ö≥∫Ω#¯?§ÙâΩ´≥rΩ÷ßæ†1ÇΩXíL>9æü¡/=|=˘ºy˝?Ù æ'ò˜Ωs$ºæŒJ6=|[&>
+ˇ>©Ü=–†=¡çªΩ+x#Ωˇ@Ω í“æaO—<(™Õ=Ï˝˚Ω]>tE->£K¨æZ«¡=Üô´<ëÕ;>èbèΩ¶¯Ä;ø´‘>•∞Kºã“”Ω¸æ’ÂI<»ãöºo>y”¿ΩãL/º˘ä_>ßÚ‰=ˇôŸºÀ0.>êù=@é?æ%æ¯°=0?”=*UBonnx::Conv_89J@ÈâBøÁ:øàäΩ†hD¿ j€ºŒ˘>∞£r>äËáæ?BáøÑ:Z?ÒfÉæt ø€€l>ﬁlì>ör*?*öBonnx::Conv_91JÄSE.=*éD=›±ΩI∫;˙ü< €ΩÉ,o=©F≥º»‹®<™ ºmüƒªRU;Ì„»=˛YP=èz+<…J=ŸóΩï(ı<ızä=“≤Ω®¢=›≥§ΩπRΩÿÖªïõ<.PÍ< è=s©Y<¬π'<‘L=ö⁄àºÇ§º?—ß<|Úﬁº¥ò=nÉ<8lu=@ÿ;Wπﬁ:ˇæ√ˇyΩc¡ÕºR'i=]™GΩ—¥«ºYÖ ΩÓç]ª\6=çﬁˆΩíAø1`ù?1ó>∆S|=@J{øÙƒ∫>cÍ’æˇR•>U@f¸¿Œ(â<øÓàæ rΩÇ©gΩº∫>®û$øô™øeW	ø VsæÏ¬@bÏù>úæ…ƒúº*mN>èπ¸=x˝áæTc∞ø]⁄>‰a?∫+æºHø˙*?Æµ{Ω è?	øeøŸFø†˘˘=ß`Ö=NÔnæ HÇ?3^væ™û»>1ÑøCkø<o(Œæ±÷
+?ô¢†=ÉÆQ>‡J2æ€]ΩÅ¨∑<;˜£=∂Ω=(ﬂQæc|–Ω°xΩ∫.(øºˆÑ<#F¬=Ctæ¨bnæ|Ki>:;©>ÖG¯=˝¬ñæìj¬æ= ÿ>¡‡§=º[>!7∂>
+LΩ€Ë±Ωˇ|Ã<ﬂS’ΩËœ>†ÔºåÎ˝ΩG•èΩÌöÇ;Ûqr>€6=⁄5>È‘ß<ù}>ΩÅZâæ©Hë=˜*ØªÒãÛ=≈{∞Ωà≥Mæ\ı≥Ω’d˝=PE9<$ˆ>Zã®<Of¯;“^ª¥Ü:‹+Ëº=ΩÒoÃΩßº˛6"=ìÑï<Ó›V∫Êï0=CNæé±^æµò≈Ω.Â}Ω†N®Ω“º´^æcg#æWy=B‚=ã>åá'=∫£‚º∆cÅΩÕl
+Ω*¡ºîÂÍºhˆ=<øá<’•3<∞⁄=\ºÉ=-„ˇ∫˚5ˇΩ'?ŸΩÉ´ΩC™†Ω3òª=£∫=øä‰;›®Ωòø‡ºaú@=\SΩ›=csL>µâæ^0)øÍ>e¬æô˜@Æ™>Q)(ø´ÁDø:/qæ 2Ç?‡IZøØøN˛◊ΩæœÊæˇ˙læ{çø[gÒ>´Ji=Ù‰ŸæÜüøß»ù?úºú>f8?gûMæÉU?r}x?pÁÇæ¡h4ø§i=?Êä£?Ê™´æ”æúŒÎ?Ì8?0â|?S¸7>1–¨>¥´ΩâZ?¥.ø∂õ?ñg„=AÉøµ\z>ÆæiøY¨ÏæXí—ææê5?|‹T='<¡º@·ΩrM‹∫ëƒÃ;ûÈº#,æÁ!ä=î®bΩ¬ˆ&ºN®™∫j˘∫Ω™µΩQãºÒ∏Ωˆj=ïoΩÅ™Ø="]>
+ˆ$=^)à>Ø‚'=S;&ºeÔ8=≈∫Ω_∫Ä<Û"•º^µÏΩeØö=ÂZΩh†Éª–24;Ad~<£+ΩÃÆÈ= x[=ñ°}Ωî»=∏6¿Ω¨<æ<H<eMÛΩó>=JE¸º≈àV<“>sæ~=Ω<®À÷Ω%©6Ω≠$=NQ˝=Ë§ì;ﬂUÖªÑ=ﬁ$C>ÃØΩåÔÅ=≈&<`≥∫≠¥`;té√=Ë<©…«=É£ZΩŸúã=8íªΩ{ΩÇæøáΩ⁄òæ’YΩP˙a<s∑HΩ _˙<>éº/±Ï<Ïh	>E]íΩL…ò=‚c;ìÇ:•ÿ^º≠Qi=∞›ıΩ2œeΩÜ-å=¿ΩÌ1ÿ=(>dC§ºk> öΩˆ€¢<ÆO∂ºFÿá>»º˛>€.ΩúzΩÑL¡=dRSºNΩ =∑%´Ω†ïºO'ıºúz(<R*∫ÇF5ºõ‡ÁΩïªzΩƒËº/üTΩ-wR= ⁄¡ºjœπΩ\=œ}πΩr√=•∑ó=¶ 8<∂∆Ãº_k•ºªäΩwç∫ÄX<1-˛ºézô<û6;<x≠‘º›d#=¿ZΩÃ÷.ºåVáΩÂ^<îÂd<.∏>ôÛB=◊ «<Ú÷óΩ5_=?Ï<]±)=Ë>ì<„ˆâΩ*5Bonnx::Conv_92J z◊;‡	=;CøæÏ¿ìæíç÷?@4˝Ω÷‘íΩÓzz=*öBonnx::Conv_94JÄSÕïΩŒ≈ºèΩP|ª;Àäπ∏Ÿ2ºz”äædhb=âÙFæõ¸Ñ>π;æ˙V†Ω¬îÀº§ô<;ìu>ji◊<∂Éæ√∫Kæ∑›ΩãÎa>éÍŒ=≈J>∞#⁄<Ì@k>+ô[>gE©>Éø£Á>âmWæπ≥Ω8m>cÿùΩ§•?Œ¨≈Ω∆$æÛV“øu5∂Ω—¨R;Î´Û>–Äæ~˛+>àBõæﬂ¨0>ñCΩiˆûºü ﬂæ∂W5>È˚IæÊÍá=°Ò=Ó(ËªÄ
+f=”ÂâºeF∫º8—9>Ï)ΩY^3æ∆1ÃΩ=|2ΩòΩ6‡´=§?Q<‹¨>†D»Ω8‰w<≥áæî◊∫=≈¥;Ûè4>GaïΩ»G=GG†æAFIΩ3,∞Ω≈Ç<∞yQΩ*<).ûæõûΩgæ’$Ï>Ç-*;«„eΩ‘2<òµÎº\ºÒß¶>≠Éæê˙É<êN©æay[>¿ΩˇPë>?=ã>5t4Ω*%Bonnx::Conv_95J…R<v€ø‡á°<FWå<*yBonnx::Conv_97J`°`Ô>◊?†<õ…ç>≤ƒÑ;ü≥‹ºíø/˜øI¿Ω4!	æÂá≈æyıæHâ~æ∫?÷>óær<+|á>≥⁄ô;Krºø¨Ôª
+›ø¿@+Ω=(Læ"Œ™æ°ªæ&sdæ*Bonnx::Conv_98JãløÉ€´øZ
+input
+
+
+
+Ä–b
+output
+
+
+
+Ä˙B
