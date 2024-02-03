@@ -1,0 +1,26 @@
+FROM holoscan-sdk-dev
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+#
+# Install Holoscan SDK
+#
+
+COPY ./holoscan-sdk /tmp/holoscan-sdk
+
+RUN cd /tmp/holoscan-sdk && \
+    rm -fr build && \
+    mkdir build && \
+    cd build && \
+    cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release \
+                      -DEXPECTED_ENABLE_TESTS=OFF \
+                      -DHOLOSCAN_BUILD_EXAMPLES=ON \
+                      -DHOLOSCAN_BUILD_TESTS=OFF \
+                      -DHOLOSCAN_BUILD_LIBTORCH=OFF && \
+    ninja install
+
+#
+# Install Holohub Operators
+#
+
+# TODO
