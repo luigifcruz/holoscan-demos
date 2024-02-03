@@ -16,16 +16,16 @@
 ---
 extensions:
   - libgxf_std.so
----
+
 sdr_rx:
   device: 'driver=lime'
   sample_rate: 256e3
   center_frequency: 96.9e6
   agc: true
----
+
 fm_dem:
   sample_rate: 256e3
----
+
 model_inference:
   backend: "onnxrt"
   model_path_map:

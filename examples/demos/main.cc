@@ -952,7 +952,7 @@ class UI {
         instance.start();
 
         computeWorker = std::thread([&]{
-            while(instance.computing()) {
+            while (instance.computing()) {
                 JST_CHECK_THROW(instance.compute());
             }
         });
@@ -1024,8 +1024,6 @@ class UI {
         // Destroy the instance.
 
         instance.destroy();
-
-        Backend::DestroyAll();
 
         JST_DEBUG("The UI was destructed.");
 
@@ -1419,7 +1417,7 @@ class ModelPreprocessor : public Operator {
 
     void start() {
         buffer = Jetstream::Tensor<Device::CPU, F32>({1, 2, 256000});
-        hol_buffer = TensorToHoloscan(buffer);
+        hol_buffer = TensorToHoloscan(MapOn<Device::CUDA>(buffer));
     }
 
     void compute(InputContext& op_input, OutputContext& op_output, ExecutionContext& context) override {
@@ -1537,6 +1535,13 @@ class SoapyApp : public holoscan::Application {
 //
 
 int main(int argc, char** argv) {
+    // Initialize CUDA context.
+
+    if (Backend::Initialize<Device::CUDA>({}) != Result::SUCCESS) {
+        JST_FATAL("Cannot initialize compute backend.");
+        return 1;
+    }
+
     // Initialize Holoscan.
 
     if (argc < 2) {
@@ -1602,6 +1607,8 @@ int main(int argc, char** argv) {
     UI(instance).run();
 
     Jetstream::HoloscanBridge::StopApp();
+
+    Backend::DestroyAll();
 
     return 0;
 }

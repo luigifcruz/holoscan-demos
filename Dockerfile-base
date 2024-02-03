@@ -6,9 +6,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 # Install Holoscan SDK
 #
 
-COPY ./holoscan-sdk /tmp/holoscan-sdk
+COPY ./holoscan-sdk /workspace/holoscan-sdk
 
-RUN cd /tmp/holoscan-sdk && \
+RUN cd /workspace/holoscan-sdk && \
     rm -fr build && \
     mkdir build && \
     cd build && \
