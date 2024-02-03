@@ -682,7 +682,7 @@ class HoloscanSource : public Module, public Compute {
         return Result::SUCCESS;
     }
 
-    Result compute(const RuntimeMetadata& meta) final {
+    Result compute(const Context&) final {
         // Running inside a locked context because the operator can 
         // be reloaded at any time by the bridge.
         return HoloscanBridge::LockContext([&]{
@@ -946,25 +946,19 @@ JST_BLOCK_ENABLE(HoloscanSource, (std::is_same<IT,  F32>::value ||
 
 class UI {
  public:
-    UI(Instance& instance) : instance(instance) {
-        JST_CHECK_THROW(create());
-    }
+    UI(Instance& instance) : instance(instance) {}
 
-    ~UI() {
-        destroy();
-    }
-
-    Result create() {
-        running = true;
+    Result run() {
+        instance.start();
 
         computeWorker = std::thread([&]{
-            while(running && instance.viewport().keepRunning()) {
+            while(instance.computing()) {
                 JST_CHECK_THROW(instance.compute());
             }
         });
 
         graphicalWorker = std::thread([&]{
-            while (running && instance.viewport().keepRunning()) {
+            while (instance.presenting()) {
                 if (instance.begin() == Result::SKIP) {
                     continue;
                 }
@@ -1008,14 +1002,29 @@ class UI {
             }
         });
 
-        return Result::SUCCESS;
-    }
+        // Wait user to close the window.
 
-    Result destroy() {
-        running = false;
-        computeWorker.join();
-        graphicalWorker.join();
+        while (instance.viewport().keepRunning()) {
+            instance.viewport().pollEvents();
+        }
+
+        // Stop the instance and wait for threads.
+
+        instance.reset();
+        instance.stop();
+
+        if (computeWorker.joinable()) {
+            computeWorker.join();
+        }
+
+        if (graphicalWorker.joinable()) {
+            graphicalWorker.join();
+        }
+
+        // Destroy the instance.
+
         instance.destroy();
+
         Backend::DestroyAll();
 
         JST_DEBUG("The UI was destructed.");
@@ -1027,7 +1036,6 @@ class UI {
     std::thread graphicalWorker;
     std::thread computeWorker;
     Instance& instance;
-    bool running = false;
 };
 
 
@@ -1565,11 +1573,12 @@ int main(int argc, char** argv) {
     Render::Window::Config renderConfig;
 
     backendConfig.headless = true;
+    backendConfig.deviceId = 0;
 
     viewportConfig.endpoint = "0.0.0.0:5002";
     viewportConfig.codec = Render::VideoCodec::H264;
 
-    JST_CHECK_THROW(instance.buildInterface(Device::Vulkan, backendConfig, viewportConfig, renderConfig));
+    JST_CHECK_THROW(instance.buildInterface(Device::Vulkan, true, backendConfig, viewportConfig, renderConfig));
 
     instance.compositor().showStore(true)
                          .showFlowgraph(true);
@@ -1590,13 +1599,9 @@ int main(int argc, char** argv) {
         JST_CHECK_THROW(instance.flowgraph().create(flowgraphPath));
     }
 
-    {
-        auto ui = UI(instance);
+    UI(instance).run();
 
-        while (instance.viewport().keepRunning()) {
-            instance.viewport().pollEvents();
-        }
-    }
+    Jetstream::HoloscanBridge::StopApp();
 
     return 0;
 }
