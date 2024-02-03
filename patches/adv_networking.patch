@@ -1,0 +1,166 @@
+diff --git a/operators/advanced_network/adv_network_common.cpp b/operators/advanced_network/adv_network_common.cpp
+index 2c1a981..b26fced 100644
+--- a/operators/advanced_network/adv_network_common.cpp
++++ b/operators/advanced_network/adv_network_common.cpp
+@@ -69,6 +69,7 @@ uint16_t adv_net_get_gpu_packet_len(std::shared_ptr<AdvNetBurstParams> burst, in
+ }
+ 
+ void adv_net_free_pkts(void **pkts, int num_pkts) {
++  auto pool = reinterpret_cast<rte_mbuf**>(pkts)[0]->pool;
+   for (int p = 0; p < num_pkts; p++) {
+     rte_pktmbuf_free_seg(reinterpret_cast<rte_mbuf**>(pkts)[p]);
+   }
+diff --git a/operators/advanced_network/adv_network_common.h b/operators/advanced_network/adv_network_common.h
+index 6d9cc2c..1d72ac0 100644
+--- a/operators/advanced_network/adv_network_common.h
++++ b/operators/advanced_network/adv_network_common.h
+@@ -588,9 +588,10 @@ struct YAML::convert<holoscan::ops::AdvNetConfigYaml> {
+ 
+             rx_cfg.queues_.emplace_back(q);
+           }
+-
++HOLOSCAN_LOG_INFO("{}",  rx_item["flows"].size());
+           for (const auto &flow_item :  rx_item["flows"]) {
+             holoscan::ops::FlowConfig flow;
++            HOLOSCAN_LOG_INFO("flow");
+             flow.name_          = flow_item["name"].as<std::string>();
+ 
+             flow.action_.type_     = holoscan::ops::FlowType::QUEUE;
+diff --git a/operators/advanced_network/adv_network_dpdk_mgr.cpp b/operators/advanced_network/adv_network_dpdk_mgr.cpp
+index aefdf91..6df34c3 100644
+--- a/operators/advanced_network/adv_network_dpdk_mgr.cpp
++++ b/operators/advanced_network/adv_network_dpdk_mgr.cpp
+@@ -677,7 +677,7 @@ void DpdkMgr::Initialize() {
+       HOLOSCAN_LOG_INFO("Not enabling promiscuous mode on port {} "
+                         "since flow isolation is enabled", rx.port_id_);
+     }
+-
++HOLOSCAN_LOG_INFO("FLOWS {}", rx.flows_.size());
+     for (const auto &flow : rx.flows_) {
+       HOLOSCAN_LOG_INFO("Adding RX flow {}", flow.name_);
+       AddFlow(rx.port_id_, flow);
+@@ -788,7 +788,7 @@ int DpdkMgr::SetupPoolsAndRings(int max_rx_batch, int max_tx_batch) {
+   return 0;
+ }
+ 
+-#define MAX_PATTERN_NUM    4
++#define MAX_PATTERN_NUM    5
+ #define MAX_ACTION_NUM    2
+ 
+ // Taken from flow_block.c DPDK example */
+@@ -798,6 +798,7 @@ struct rte_flow *DpdkMgr::AddFlow(int port, const FlowConfig &cfg) {
+   struct rte_flow_item pattern[MAX_PATTERN_NUM];
+   struct rte_flow_action action[MAX_ACTION_NUM];
+   struct rte_flow *flow = NULL;
++  struct rte_flow_item_vlan vlan;
+   struct rte_flow_action_queue queue = { .index = cfg.action_.id_ };
+   struct rte_flow_error error;
+   struct rte_flow_item_udp udp_spec;
+@@ -830,7 +831,8 @@ struct rte_flow *DpdkMgr::AddFlow(int port, const FlowConfig &cfg) {
+ 
+   /* Set this level to allow all. 8< */
+   pattern[0].type = RTE_FLOW_ITEM_TYPE_ETH;
+-  pattern[1].type = RTE_FLOW_ITEM_TYPE_IPV4;
++  pattern[1].type = RTE_FLOW_ITEM_TYPE_VLAN;
++  pattern[2].type = RTE_FLOW_ITEM_TYPE_IPV4;
+ 
+   /* >8 End of setting the first level of the pattern. */
+   udp_spec.hdr.src_port = htons(cfg.match_.udp_src_);
+@@ -848,12 +850,12 @@ struct rte_flow *DpdkMgr::AddFlow(int port, const FlowConfig &cfg) {
+   udp_item.mask = &udp_mask;
+   udp_item.last = NULL;
+ 
+-  pattern[2] = udp_item;
++  pattern[3] = udp_item;
+ 
+   attr.priority = 0;
+ 
+   /* The final level must be always type end. 8< */
+-  pattern[3].type = RTE_FLOW_ITEM_TYPE_END;
++  pattern[4].type = RTE_FLOW_ITEM_TYPE_END;
+   /* >8 End of final level must be always type end. */
+ 
+   /* Validate the rule and create it. 8< */
+@@ -1059,6 +1061,9 @@ int DpdkMgr::rx_core(void *arg) {
+   uint64_t freq = rte_get_tsc_hz();
+   uint64_t timeout_ticks = freq * 0.02;  // expect all packets within 20ms
+ 
++  auto cpup = rte_mempool_lookup("RX_CPU_POOL_P0_Q1");
++  auto gpup = rte_mempool_lookup("RX_GPU_POOL_P0_Q1");
++printf("%p %p\n", cpup, gpup);
+   uint64_t total_pkts = 0;
+ 
+   flush_packets(tparams->port);
+@@ -1137,6 +1142,12 @@ int DpdkMgr::rx_core(void *arg) {
+         continue;
+       }
+ 
++      // uint8_t *pp = rte_pktmbuf_mtod(mbuf_arr[0], uint8_t*);
++      // for (int i = 0; i < 64; i++) {
++      //   printf("%02X ", pp[i]);
++      // }
++      // printf("\n");
++
+       to_copy       = std::min(nb_rx, (int)(tparams->batch_size - burst->hdr.hdr.num_pkts));
+ 
+       if (!tparams->gpu_direct || tparams->hds) {
+diff --git a/operators/advanced_network/adv_network_rx.cpp b/operators/advanced_network/adv_network_rx.cpp
+index 33b0ce8..36f149f 100644
+--- a/operators/advanced_network/adv_network_rx.cpp
++++ b/operators/advanced_network/adv_network_rx.cpp
+@@ -39,6 +39,7 @@ void AdvNetworkOpRx::setup(OperatorSpec& spec) {
+       "Configuration",
+       "Configuration for the advanced network operator",
+       AdvNetConfigYaml());
++      HOLOSCAN_LOG_INFO("DONE");
+ }
+ 
+ void AdvNetworkOpRx::initialize() {
+@@ -88,15 +89,23 @@ void AdvNetworkOpRx::compute([[maybe_unused]] InputContext&, OutputContext& op_o
+   }
+ 
+   if (rte_ring_dequeue(impl->rx_ring, reinterpret_cast<void**>(&burst)) < 0) {
+-    return;
++    if (++empty_batches_ == EMPTY_BATCH_LIMIT) {
++      for (const auto &p : pq_map_) {
++        op_output.emit(nullptr, p.second.c_str());
++        break;
++      }
++      
++      empty_batches_ = 0;
++    }
++  } else {
++    auto adv_burst = new AdvNetBurstParams();
++    memcpy(adv_burst, burst, sizeof(*burst));
++    rte_mempool_put(impl->rx_meta_pool, burst);
++
++    const auto port_str = pq_map_[(adv_burst->hdr.hdr.port_id << 16) | adv_burst->hdr.hdr.q_id];
++    op_output.emit(adv_burst, port_str.c_str());
++    empty_batches_ = 0;
+   }
+-
+-  auto adv_burst = std::make_shared<AdvNetBurstParams>();
+-  memcpy(adv_burst.get(), burst, sizeof(*burst));
+-  rte_mempool_put(impl->rx_meta_pool, burst);
+-
+-  const auto port_str = pq_map_[(adv_burst->hdr.hdr.port_id << 16) | adv_burst->hdr.hdr.q_id];
+-  op_output.emit(adv_burst, port_str.c_str());
+ }
+ 
+ };  // namespace holoscan::ops
+diff --git a/operators/advanced_network/adv_network_rx.h b/operators/advanced_network/adv_network_rx.h
+index e648174..93a262b 100644
+--- a/operators/advanced_network/adv_network_rx.h
++++ b/operators/advanced_network/adv_network_rx.h
+@@ -49,9 +49,11 @@ class AdvNetworkOpRx : public Operator {
+ 
+ 
+  private:
++    static constexpr uint32_t EMPTY_BATCH_LIMIT = 10;
+     static constexpr int RX_BURST_SIZE = 128;
+     AdvNetworkOpRxImpl *impl;
+     std::unordered_map<uint32_t, std::string> pq_map_;
++    uint32_t empty_batches_ = 0;
+     Parameter<std::string> if_name_;
+     Parameter<std::string> cpu_cores_;
+     Parameter<std::string> master_core_;
