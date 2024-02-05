@@ -35,5 +35,25 @@ $ docker build -t holoscan-demo -f Dockerfile .
 
 ### 6. Run the demo container
 ```
-$ 
+$ nvidia_icd_json=$(find /usr/share /etc -path '*/vulkan/icd.d/nvidia_icd.json' -type f -print -quit 2>/dev/null | grep .) || (echo "nvidia_icd.json not found" >&2 && false)
+$ sudo docker run -it --rm --net host --privileged --runtime=nvidia -u root \
+    --device /dev/snd \
+    -v /dev/bus/usb:/dev/bus/usb \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v /mnt/huge:/mnt/huge \
+    -v .:/workspace/demos \
+    -v $nvidia_icd_json:$nvidia_icd_json:ro \
+    -e NVIDIA_DRIVER_CAPABILITIES=graphics,video,compute,utility,display \
+    -e DISPLAY=$DISPLAY \
+    holoscan-demo
 ```
+
+### 7. Fun!
+This directory with the examples will be mounted at `/workspace/demos`. Check each example README for further instructions.
+
+## Feedback
+
+- An easy way to install Holohub operators. I had to hack an installer for the Advanced Network operator.
+- Newer Ubuntu base image. Ubuntu 20.04 is a bit old and lacks C++20 support with the default GCC. A PPA is required for GCC-11.
+- Updated CUDA version. Two year old CUDA 11.6 lacks C++20 support.
+- Holoscan complex number support. I guess this one is coming with an updated `libcudacxx`.
