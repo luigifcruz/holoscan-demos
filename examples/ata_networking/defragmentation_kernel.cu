@@ -5,12 +5,9 @@
 
 __global__ void DefragmentationKernel(void* defragmented_gpu_data, 
                                       void** fragmented_gpu_data, 
-                                      int total_fragments, 
-                                      std::tuple<uint64_t, uint64_t, uint64_t, uint64_t> partialShape,
-                                      std::tuple<uint64_t, uint64_t, uint64_t, uint64_t> totalShape) {
-    const auto& [pA, pF, pT, pP] = partialShape;
-    const auto& [tA, tF, tT, tP] = totalShape;
-
+                                      int total_fragments,
+                                      uint64_t pA, uint64_t pF, uint64_t pT, uint64_t pP,
+                                      uint64_t tA, uint64_t tF, uint64_t tT, uint64_t tP) {
     int fragment_id = blockIdx.x;
     int thread_id = threadIdx.x;
 
@@ -61,10 +58,13 @@ cudaError_t DefragmentationKernel(void* defragmented_gpu_data,
                                   cudaStream_t stream, 
                                   std::tuple<uint64_t, uint64_t, uint64_t, uint64_t> partialShape,
                                   std::tuple<uint64_t, uint64_t, uint64_t, uint64_t> totalShape) {
+    const auto& [pA, pF, pT, pP] = partialShape;
+    const auto& [tA, tF, tT, tP] = totalShape;
+
     DefragmentationKernel<<<total_fragments, 32, 0, stream>>>(defragmented_gpu_data, 
                                                               fragmented_gpu_data, 
                                                               total_fragments, 
-                                                              partialShape, 
-                                                              totalShape);
+                                                              pA, pF, pT, pP,
+                                                              tA, tF, tT, tP);
     return cudaGetLastError();
 }
