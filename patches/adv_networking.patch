@@ -1,7 +1,7 @@
-diff --git a/operators/advanced_network/adv_network_common.cpp b/operators/advanced_network/adv_network_common.cpp
+diff --git a/adv_network_common.cpp b/adv_network_common.cpp
 index 2c1a981..b26fced 100644
---- a/operators/advanced_network/adv_network_common.cpp
-+++ b/operators/advanced_network/adv_network_common.cpp
+--- a/adv_network_common.cpp
++++ b/adv_network_common.cpp
 @@ -69,6 +69,7 @@ uint16_t adv_net_get_gpu_packet_len(std::shared_ptr<AdvNetBurstParams> burst, in
  }
  
@@ -10,10 +10,10 @@ index 2c1a981..b26fced 100644
    for (int p = 0; p < num_pkts; p++) {
      rte_pktmbuf_free_seg(reinterpret_cast<rte_mbuf**>(pkts)[p]);
    }
-diff --git a/operators/advanced_network/adv_network_common.h b/operators/advanced_network/adv_network_common.h
+diff --git a/adv_network_common.h b/adv_network_common.h
 index 6d9cc2c..1d72ac0 100644
---- a/operators/advanced_network/adv_network_common.h
-+++ b/operators/advanced_network/adv_network_common.h
+--- a/adv_network_common.h
++++ b/adv_network_common.h
 @@ -588,9 +588,10 @@ struct YAML::convert<holoscan::ops::AdvNetConfigYaml> {
  
              rx_cfg.queues_.emplace_back(q);
@@ -26,10 +26,10 @@ index 6d9cc2c..1d72ac0 100644
              flow.name_          = flow_item["name"].as<std::string>();
  
              flow.action_.type_     = holoscan::ops::FlowType::QUEUE;
-diff --git a/operators/advanced_network/adv_network_dpdk_mgr.cpp b/operators/advanced_network/adv_network_dpdk_mgr.cpp
+diff --git a/adv_network_dpdk_mgr.cpp b/adv_network_dpdk_mgr.cpp
 index aefdf91..6df34c3 100644
---- a/operators/advanced_network/adv_network_dpdk_mgr.cpp
-+++ b/operators/advanced_network/adv_network_dpdk_mgr.cpp
+--- a/adv_network_dpdk_mgr.cpp
++++ b/adv_network_dpdk_mgr.cpp
 @@ -677,7 +677,7 @@ void DpdkMgr::Initialize() {
        HOLOSCAN_LOG_INFO("Not enabling promiscuous mode on port {} "
                          "since flow isolation is enabled", rx.port_id_);
@@ -104,10 +104,10 @@ index aefdf91..6df34c3 100644
        to_copy       = std::min(nb_rx, (int)(tparams->batch_size - burst->hdr.hdr.num_pkts));
  
        if (!tparams->gpu_direct || tparams->hds) {
-diff --git a/operators/advanced_network/adv_network_rx.cpp b/operators/advanced_network/adv_network_rx.cpp
-index 33b0ce8..36f149f 100644
---- a/operators/advanced_network/adv_network_rx.cpp
-+++ b/operators/advanced_network/adv_network_rx.cpp
+diff --git a/adv_network_rx.cpp b/adv_network_rx.cpp
+index 33b0ce8..d81bbaf 100644
+--- a/adv_network_rx.cpp
++++ b/adv_network_rx.cpp
 @@ -39,6 +39,7 @@ void AdvNetworkOpRx::setup(OperatorSpec& spec) {
        "Configuration",
        "Configuration for the advanced network operator",
@@ -130,8 +130,8 @@ index 33b0ce8..36f149f 100644
 +      empty_batches_ = 0;
 +    }
 +  } else {
-+    auto adv_burst = new AdvNetBurstParams();
-+    memcpy(adv_burst, burst, sizeof(*burst));
++    auto adv_burst = std::make_shared<AdvNetBurstParams>();
++    memcpy(adv_burst.get(), burst, sizeof(*burst));
 +    rte_mempool_put(impl->rx_meta_pool, burst);
 +
 +    const auto port_str = pq_map_[(adv_burst->hdr.hdr.port_id << 16) | adv_burst->hdr.hdr.q_id];
@@ -148,10 +148,10 @@ index 33b0ce8..36f149f 100644
  }
  
  };  // namespace holoscan::ops
-diff --git a/operators/advanced_network/adv_network_rx.h b/operators/advanced_network/adv_network_rx.h
+diff --git a/adv_network_rx.h b/adv_network_rx.h
 index e648174..93a262b 100644
---- a/operators/advanced_network/adv_network_rx.h
-+++ b/operators/advanced_network/adv_network_rx.h
+--- a/adv_network_rx.h
++++ b/adv_network_rx.h
 @@ -49,9 +49,11 @@ class AdvNetworkOpRx : public Operator {
  
  
