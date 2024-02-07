@@ -618,10 +618,10 @@ class AtaTransportOpRx : public Operator {
             const auto& c = checkerboard_pool[i];
 
             HOLOSCAN_LOG_INFO("  - Checkerboard {}: [{} - {}] [{}] {}/{} ", i, c->time_range().start,
-                                                                            c->time_range().end,
-                                                                            c->is_processing() ? "PROC" : "IDLE",
-                                                                            c->fragment_counter(),
-                                                                            c->total_fragments());
+                                                                               c->time_range().end,
+                                                                               c->is_processing() ? "PROC" : "IDLE",
+                                                                               c->fragment_counter(),
+                                                                               c->total_fragments());
         }
 
         last_report_packet_counter = packet_counter;
