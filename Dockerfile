@@ -24,7 +24,6 @@ RUN python3 -m pip install meson ninja
 
 RUN apt install -y libxkbcommon-dev
 
-
 RUN apt update
 RUN apt install -y libgstreamer1.0-dev gstreamer1.0-tools gstreamer1.0-libav
 RUN apt install -y gstreamer1.0-plugins-base libgstreamer-plugins-bad1.0-dev 

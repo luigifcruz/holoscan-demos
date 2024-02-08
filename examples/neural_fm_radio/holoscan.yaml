@@ -1,0 +1,27 @@
+%YAML 1.2
+---
+extensions:
+  - libgxf_std.so
+
+sdr_rx:
+  device: 'driver=lime'
+  sample_rate: 256e3
+  center_frequency: 96.9e6
+  agc: true
+
+fm_dem:
+  sample_rate: 256e3
+
+model_inference:
+  backend: "onnxrt"
+  model_path_map:
+    'cursednet': './cursednet.onnx'
+  pre_processor_map: 
+    "cursednet": ["input"]
+  inference_map: 
+    "cursednet": ["output"]
+  infer_on_cpu: true
+  input_on_cuda: false
+  output_on_cuda: false
+  transmit_on_cuda: false
+  is_engine_path: false
