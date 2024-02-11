@@ -11,11 +11,13 @@ namespace Jetstream {
 
 #define JST_SOURCE_CPU(MACRO) \
     MACRO(Source, CPU, CF32) \
-    MACRO(Source, CPU, F32)
+    MACRO(Source, CPU, F32) \
+    MACRO(Source, CPU, CI8)
 
 #define JST_SOURCE_CUDA(MACRO) \
     MACRO(Source, CUDA, CF32) \
-    MACRO(Source, CUDA, F32)
+    MACRO(Source, CUDA, F32) \
+    MACRO(Source, CUDA, CI8)
 
 template<Device D, typename T = CF32>
 class Source : public Module, public Compute {
