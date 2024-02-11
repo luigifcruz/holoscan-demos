@@ -1,9 +1,8 @@
-#include "adv_network_rx.h"
-#include "adv_network_tx.h"
-#include "adv_network_kernels.h"
-
-#include "holoscan/holoscan.hpp"
-#include "holoscan/core/operator.hpp"
+#include <holoscan/holoscan.hpp>
+#include <holoscan/core/operator.hpp>
+#include <holoscan/operators/adv_network/adv_network_rx.h>
+#include <holoscan/operators/adv_network/adv_network_tx.h>
+#include <holoscan/operators/adv_network/adv_network_kernels.h>
 
 #include <netinet/in.h>
 
@@ -175,6 +174,7 @@ class AtaTransportOpRx : public Operator {
 
         obsolete_rewinds_counter = 0;
         complete_rewinds_counter = 0;
+        packet_counter = 0;
 
         report_thread_running = true;
         report_thread = std::thread([&]{
@@ -246,9 +246,7 @@ class AtaTransportOpRx : public Operator {
         std::vector<void*> gpu_pkts;
         gpu_pkts.reserve(1000);
 
-        std::shared_ptr<Checkerboard> checkerboard;
-
-        for (uint64_t i = 0; i < number_of_packets; i++) {
+        for (int64_t i = 0; i < number_of_packets; i++) {
             const auto* p = reinterpret_cast<uint8_t*>(adv_net_get_cpu_pkt_ptr(packet_burst, i));
             const VoltagePacket packet(p + transport_header_size_);
 
@@ -290,13 +288,7 @@ class AtaTransportOpRx : public Operator {
                     end_timestamp += block_time_length;
                 }
             }
-/*
-            if (packet.antenna_id >= 5) {
-                cpu_pkts.push_back(packet_burst->cpu_pkts[i]);
-                gpu_pkts.push_back(packet_burst->gpu_pkts[i]);
-                continue;
-            }
-*/
+
             // Check packet timestamp is within the range of the checkerboards.
 
             if (packet.timestamp < start_timestamp || packet.timestamp >= end_timestamp) {
@@ -309,11 +301,11 @@ class AtaTransportOpRx : public Operator {
 
             uint64_t id = 0;
             
-            if (!checkerboard || !checkerboard->in_range(packet.timestamp)) {
+            if (!cached || !cached->in_range(packet.timestamp)) {
                 for (uint64_t x = 0; x < checkerboards.size(); x++) {
                     if (checkerboards[x]->in_range(packet.timestamp)) {
                         id = x;
-                        checkerboard = checkerboards[x];
+                        cached = checkerboards[x];
                         break;
                     }
                 }
@@ -321,7 +313,7 @@ class AtaTransportOpRx : public Operator {
 
             // Try to add fragment to checkerboard. Free packets if it fails.
 
-            if (!checkerboard || !checkerboard->add_fragment(packet_burst, i, packet)) {
+            if (!cached || !cached->add_fragment(packet_burst, i, packet)) {
                 cpu_pkts.push_back(packet_burst->cpu_pkts[i]);
                 gpu_pkts.push_back(packet_burst->gpu_pkts[i]);
                 continue;
@@ -329,9 +321,9 @@ class AtaTransportOpRx : public Operator {
 
             // Check if the checkerboard is complete. Start processing if it is.
 
-            if (checkerboard->is_complete()) {
-                checkerboard->defragment();
-                defragment_queue.push(checkerboard);
+            if (cached->is_complete()) {
+                cached->defragment();
+                defragment_queue.push(cached);
                 checkerboards.erase(checkerboards.begin() + id);
             }
         }
@@ -582,6 +574,7 @@ class AtaTransportOpRx : public Operator {
     std::vector<std::shared_ptr<Checkerboard>> checkerboard_pool;
     std::queue<std::shared_ptr<Checkerboard>> defragment_queue;
     std::vector<std::shared_ptr<Checkerboard>> checkerboards;
+    std::shared_ptr<Checkerboard> cached;
 
     uint64_t block_seed_time;
     uint64_t start_timestamp;

@@ -1,13 +1,10 @@
-project(
-    'ATA Networking',
-    ['cpp', 'cuda'],
-    version: '0.0.0',
-    default_options: [
-        'cpp_std=c++20',
-        'buildtype=release',
-        'b_ndebug=if-release',
-        'cuda_std=c++17',
-    ]
+custom_target(
+    'default.yaml',
+    input: 'default.yaml',
+    output:  'default.yaml',
+    command: ['cp', '@INPUT@', '@OUTPUT@'],
+    install: false,
+    build_by_default: true
 )
 
 src_lst = [
@@ -16,17 +13,15 @@ src_lst = [
 ]
 
 executable(
-    'main', 
+    'ata_networking', 
     src_lst,
     dependencies: [
         dependency('cuda', modules: ['cudart', 'culibos']),
         dependency(
             'holoscan', 
             modules: [
-                'holoscan::core', 
-                'holoscan::logger', 
-                'holoscan::infer',
-                'holoscan::ops::inference',
+                'holoscan::core',
+                'holoscan::logger',
             ]
         ),
         dependency(
@@ -37,11 +32,6 @@ executable(
                 'holoscan::ops::advanced_network_rx',
             ]
         ),
-        dependency('jetstream'),
-        dependency('soapysdr', 'SoapySDR'),
     ],
     install: true,
-    # Meson is not setting this for some reason.
-    install_rpath: '/opt/nvidia/holoscan/lib/',
-    build_rpath: '/opt/nvidia/holoscan/lib/',
 )
