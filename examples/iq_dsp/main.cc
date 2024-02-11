@@ -91,7 +91,6 @@ class SineTxOp : public Operator {
         op_output.emit(ptr, "out");
     };
 
-
  private:
     Memory::Juggler<TensorType> juggler;
 };
