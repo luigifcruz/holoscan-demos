@@ -1,0 +1,36 @@
+---
+protocolVersion: 1.0.0
+cyberetherVersion: '1.0.0-alpha3'
+graph:
+  hol_source0:
+    module: 'holoscan-source'
+    device: cuda
+    dataType: F32
+    config:
+      shape: '5, 1572864'
+      nodeOutputName: 'block_out'
+      nodeName: 'blade'
+    interface:
+      nodePos: [286, 411]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  wat2:
+    module: waterfall
+    device: cuda
+    dataType: F32
+    config:
+      viewSize: [512, 384]
+      interpolate: true
+      height: 512
+      offset: 0
+      zoom: 1
+    input:
+      buffer: ${graph.hol_source0.output.buffer}
+    interface:
+      nodePos: [1034, 310]
+      controlEnabled: false
+      previewEnabled: true
+      viewEnabled: false
+      nodeWidth: 300
