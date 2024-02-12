@@ -27,9 +27,10 @@ COPY ./holohub /workspace/holohub
 
 # Install MLX5 (Advanced Network Dependency) [**ARCH DEPENDENT**]
 
-RUN wget -q https://content.mellanox.com/ofed/MLNX_OFED-5.8-1.0.1.1/MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-x86_64.tgz && \
-    tar xf MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-x86_64.tgz && \
-    cd MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-x86_64 && \
+ARG ARCH=x86_64
+RUN wget -q https://content.mellanox.com/ofed/MLNX_OFED-5.8-1.0.1.1/MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-${ARCH}.tgz && \
+    tar xf MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-${ARCH}.tgz && \
+    cd MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-${ARCH} && \
     ./mlnxofedinstall --upstream-libs --dpdk --with-mft --upstream-libs --user-space-only --force --without-fw-update
 
 # Install DPDK (Advanced Network Dependency)
