@@ -69,7 +69,7 @@ WORKDIR /workspace
 
 RUN git clone https://github.com/luigifcruz/CyberEther.git
 RUN cd CyberEther \
-    && git checkout v1.0.0-alpha3 \
+    && git checkout v1.0.0-alpha4 \
     && rm -fr build \
     && CC=gcc-11 CXX=g++-11 meson setup -Dbuildtype=debugoptimized build \
     && cd build \
