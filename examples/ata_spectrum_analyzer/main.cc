@@ -768,7 +768,9 @@ class BladeOp : public Operator {
         pipeline->transferIn(deviceInputBuffer);
         pipeline->compute(0);
 
-        if (pipeline->willOutput()) {
+        const auto willOutput = pipeline->willOutput();
+
+        if (willOutput) {
             while ((block_out = block_pool.get()) == nullptr) {
                 std::this_thread::sleep_for(std::chrono::milliseconds(1));
             }
@@ -779,7 +781,9 @@ class BladeOp : public Operator {
 
         pipeline->synchronize(0);
 
-        op_output.emit(block_out, "block_out");
+        if (willOutput) {
+            op_output.emit(block_out, "block_out");
+        }
     };
 
  private:
@@ -878,12 +882,13 @@ int main(int argc, char** argv) {
     Backend::Config backendConfig;
     backendConfig.headless = true;
     backendConfig.deviceId = 2;
+    backendConfig.validationEnabled = false;
 
     Viewport::Config viewportConfig;
     viewportConfig.endpoint = "0.0.0.0:5002";
     viewportConfig.codec = Render::VideoCodec::H264;
 
-    CyberBridge::Holoscan::StartRender("", backendConfig, viewportConfig, [&]{
+    CyberBridge::Holoscan::StartRender("./cyberether.yml", backendConfig, viewportConfig, [&]{
         if (!CyberBridge::Holoscan::IsAppRunning()) {
             ImGui::Text("Holoscan app is not running.");
             return Result::SUCCESS;
