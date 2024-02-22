@@ -7,10 +7,25 @@ graph:
     device: cpu
     dataType: CF32
     config:
+      shape: '8, 2048'
       nodeOutputName: 'out'
       nodeName: 'sine-noise'
     interface:
       nodePos: [296, 347]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  hol_source4:
+    module: 'holoscan-source'
+    device: cpu
+    dataType: CF32
+    config:
+      shape: '8, 2048'
+      nodeOutputName: 'out'
+      nodeName: 'logo-draw'
+    interface:
+      nodePos: [595, 628]
       controlEnabled: false
       previewEnabled: false
       viewEnabled: false
@@ -27,19 +42,6 @@ graph:
       nodePos: [859, 74]
       controlEnabled: false
       previewEnabled: true
-      viewEnabled: false
-      nodeWidth: 300
-  hol_source4:
-    module: 'holoscan-source'
-    device: cpu
-    dataType: CF32
-    config:
-      nodeOutputName: 'out'
-      nodeName: 'logo-draw'
-    interface:
-      nodePos: [595, 628]
-      controlEnabled: false
-      previewEnabled: false
       viewEnabled: false
       nodeWidth: 300
   con6:
