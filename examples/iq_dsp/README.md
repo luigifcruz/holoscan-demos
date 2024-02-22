@@ -1,4 +1,4 @@
-# Complex Digital Signal Processing
+# Complex I/Q Digital Signal Processing
 This demo will create synthetic data and process it using an assortment of Holoscan DSP operators. The generated data can be visualized using CyberEther. For example, the NVIDIA logo encoded in the IQ stream together with a circle inside a constellation diagram.
 
 ## Usage

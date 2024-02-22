@@ -1,12 +1,16 @@
 # Holoscan Demos
-
-The official Holoscan v0.6 docker image comes with Ubuntu 20.04 and CUDA 11.6. But BLADE and CyberEther requires at least CUDA 11.7 to work correcly. To fix this, we apply a patch to the `Dockerfile` distributed with the official image to update the base TensorRT docker image from 22.03 to 22.12. This will allow us to use CUDA 11.8 while still using Ubuntu 20.04 as the base image.
+This repository contains examples on how to use the Holoscan SDK and CyberEther to build SDR applications.
 
 ## Examples
 
-- [ATA Spectrum Analyzer](./examples/ata_spectrum_analyzer/): Holoscan Advanced Networking and CyberEther effectively turning the Allen Telescope Array into a very large SDR.
-- [IQ DSP](./examples/iq_dsp/): Hello world example on how to manipulate complex IQ stream within Holoscan and CyberEther.
-- [Neural FM Radio](./examples/neural_fm_radio/): Example with a ONNX model directly demodulating a FM radio station from a SDR IQ stream.
+### Allen Telescope Array Spectrum Analyzer
+Holoscan Advanced Networking and CyberEther effectively turning the Allen Telescope Array into a very large SDR. [Go to example](./examples/ata_spectrum_analyzer/).
+
+### Complex I/Q Digital Signal Processing
+Hello world example on how to manipulate complex IQ stream within Holoscan and CyberEther. [Go to example](./examples/iq_dsp/).
+
+### Neural FM Radio
+Example with a ONNX model directly demodulating a FM radio station from a SDR IQ stream. [Go to example](./examples/neural_fm_radio/).
 
 ## Build Development Image
 
@@ -67,7 +71,9 @@ $ ninja
 ### 7. Fun!
 Check each [example](#examples) README for further instructions.
 
-## Feedback
+## Notes
+The official Holoscan v0.6 docker image comes with Ubuntu 20.04 and CUDA 11.6. But BLADE and CyberEther requires at least CUDA 11.7 to work correcly. To fix this, we apply a patch to the `Dockerfile` distributed with the official image to update the base TensorRT docker image from 22.03 to 22.12. This will allow us to use CUDA 11.8 while still using Ubuntu 20.04 as the base image. This is a temporary fix until the code is ported to Holoscan v1.0 in the near future.
 
+## Feedback
 - An easy way to install Holohub operators. I had to hack an installer for the Advanced Network operator.
 - Holoscan complex number support. I guess this one is coming with an updated `libcudacxx`.
