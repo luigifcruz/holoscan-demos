@@ -442,6 +442,11 @@ class AtaTransportOpRx : public Operator {
             CHECK_CUDA(cudaMallocHost(&fragmented_gpu_data, _total_fragments * sizeof(void*)));
             CHECK_CUDA(cudaStreamCreateWithFlags(&stream, cudaStreamNonBlocking));
 
+            _partial_size = _partial.number_of_antennas * 
+                            _partial.number_of_channels * 
+                            _partial.number_of_samples * 
+                            _partial.number_of_polarizations;
+
             _time_range.start = 0;
             _time_range.end = 0;
 
@@ -564,22 +569,11 @@ class AtaTransportOpRx : public Operator {
         }
 
         void defragment(const std::shared_ptr<BlockType>& tensor) {
-            const auto pA = _partial.number_of_antennas;
-            const auto pF = _partial.number_of_channels;
-            const auto pT = _partial.number_of_samples;
-            const auto pP = _partial.number_of_polarizations;
-
-            const auto tA = _total.number_of_antennas;
-            const auto tF = _total.number_of_channels;
-            const auto tT = _total.number_of_samples;
-            const auto tP = _total.number_of_polarizations;
-
             CHECK_CUDA(LaunchDefragmentationKernel(tensor->data(), 
                                                    fragmented_gpu_data, 
                                                    _total_fragments, 
-                                                   stream, 
-                                                   {pA, pF, pT, pP}, 
-                                                   {tA, tF, tT, tP}));
+                                                   _partial_size,
+                                                   stream));
         }
 
      private:
@@ -591,6 +585,7 @@ class AtaTransportOpRx : public Operator {
         uint64_t _total_fragments;
         uint64_t _time_step_length;
         uint64_t _total_time_steps;
+        uint64_t _partial_size;
 
         uint64_t _antenna_slots;
         uint64_t _channel_slots;
