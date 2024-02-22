@@ -9,6 +9,8 @@ Holoscan Advanced Networking and CyberEther effectively turning the Allen Telesc
 ### Complex I/Q Digital Signal Processing
 Hello world example on how to manipulate complex IQ stream within Holoscan and CyberEther. [Go to example](./examples/iq_dsp/).
 
+![image_2024-02-22_19-39-30](https://github.com/luigifcruz/holoscan-demos/assets/6627901/8cd4f3af-b924-40b7-8217-0478ede6305b)
+
 ### Neural FM Radio
 Example with a ONNX model directly demodulating a FM radio station from a SDR IQ stream. [Go to example](./examples/neural_fm_radio/).
 
