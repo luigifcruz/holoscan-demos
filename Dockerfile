@@ -89,3 +89,15 @@ RUN cd blade \
     && cd build \
     && ninja \
     && ninja install
+
+#
+# Build & Install CyberBridge
+#
+
+COPY ./cyberbridge /workspace/cyberbridge
+RUN cd cyberbridge \
+    && rm -fr build \
+    && CC=gcc-11 CXX=g++-11 meson setup -Dbuildtype=debugoptimized build \
+    && cd build \
+    && ninja \
+    && ninja install
