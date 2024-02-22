@@ -236,7 +236,7 @@ int main() {
     viewportConfig.endpoint = "0.0.0.0:5002";
     viewportConfig.codec = Render::VideoCodec::H264;
 
-    CyberBridge::Holoscan::StartRender("", backendConfig, viewportConfig, [&]{
+    CyberBridge::Holoscan::StartRender("./cyberether.yml", backendConfig, viewportConfig, [&]{
         if (!CyberBridge::Holoscan::IsAppRunning()) {
             ImGui::Text("Holoscan app is not running.");
             return Result::SUCCESS;
