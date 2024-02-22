@@ -5,7 +5,6 @@ The official Holoscan v0.6 docker image comes with Ubuntu 20.04 and CUDA 11.6. B
 ## Examples
 
 - [ATA Spectrum Analyzer](./examples/ata_spectrum_analyzer/): Holoscan Advanced Networking and CyberEther effectively turning the Allen Telescope Array into a very large SDR.
-- [ATA Networking](./examples/ata_networking): Minimal example to receive and parse voltage packets from the ATA's RFSoC boards into blocks.
 - [IQ DSP](./examples/iq_dsp/): Hello world example on how to manipulate complex IQ stream within Holoscan and CyberEther.
 - [Neural FM Radio](./examples/neural_fm_radio/): Example with a ONNX model directly demodulating a FM radio station from a SDR IQ stream.
 
@@ -56,12 +55,19 @@ $ sudo docker run -it --rm --net host --privileged --runtime=nvidia -u root \
     holoscan-demo
 ```
 
+### 7. Compile the examples
+This directory with the examples will be mounted at `/workspace/demos`. You can compile the examples with the following commands:
+```
+$ cd demos
+$ CXX=g++-11 CC=gcc-11 meson -Dbuildtype=debugoptimized build
+$ cd build
+$ ninja
+```
+
 ### 7. Fun!
-This directory with the examples will be mounted at `/workspace/demos`. Check each example README for further instructions.
+Check each [example](#examples) README for further instructions.
 
 ## Feedback
 
 - An easy way to install Holohub operators. I had to hack an installer for the Advanced Network operator.
-- Newer Ubuntu base image. Ubuntu 20.04 is a bit old and lacks C++20 support with the default GCC. A PPA is required for GCC-11.
-- Updated CUDA version. Two year old CUDA 11.6 lacks C++20 support.
 - Holoscan complex number support. I guess this one is coming with an updated `libcudacxx`.

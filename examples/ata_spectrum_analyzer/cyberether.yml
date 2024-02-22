@@ -16,6 +16,33 @@ graph:
       previewEnabled: false
       viewEnabled: false
       nodeWidth: 300
+  amp3:
+    module: amplitude
+    device: cuda
+    inputDataType: F32
+    outputDataType: F32
+    input:
+      buffer: ${graph.hol_source0.output.buffer}
+    interface:
+      nodePos: [641, 567]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 154
+  sca5:
+    module: scale
+    device: cuda
+    dataType: F32
+    config:
+      range: [-26, 10]
+    input:
+      buffer: ${graph.amp3.output.buffer}
+    interface:
+      nodePos: [848, 605]
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
   wat2:
     module: waterfall
     device: cuda
@@ -27,9 +54,9 @@ graph:
       offset: 0
       zoom: 1
     input:
-      buffer: ${graph.hol_source0.output.buffer}
+      buffer: ${graph.sca5.output.buffer}
     interface:
-      nodePos: [1034, 310]
+      nodePos: [1176, 369]
       controlEnabled: false
       previewEnabled: true
       viewEnabled: false

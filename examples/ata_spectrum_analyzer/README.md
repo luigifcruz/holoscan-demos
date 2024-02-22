@@ -1,16 +1,9 @@
-# Allen Telescope Array Advanced Networking Operator
+# Allen Telescope Array Spectrum Analyzer
+This demo will interface with the Allen Telescope Array (ATA) network via the Holoscan Advanced Network Operator (ANO) to receive and process data from the ATA network. The data will be processed using the Breakthrough Listen Accelerated DSP Engine (BLADE) to produce beamformed data. The beamformed data will be sent to CyberEther where it will be processed for visualization.
 
 ## Usage
 
-### 1. Build 
-```
-$ cd demos/examples/ata_networking/
-$ CXX=g++-11 CC=gcc-11 meson -Dbuildtype=debugoptimized build
-$ cd build
-$ ninja
-```
-
-### 2. Setup machine
+### 1. Setup machine
 This example requires `nvidia-peermem` to be active. It's also best practice to disable dynamic clock in the CPU. This can be done by executing these commands in the **host machine**:
 ```
 $ sudo cpufreq-set -g performance
@@ -23,8 +16,10 @@ Check if the target network card is correct in the configuration YAML file.
 
 ### 4. Run
 ```
-$ ./main ../default.yaml
+$ cd examples/ata_spectrum_analyzer
+$ ./main
 ```
+This will start the application and it will start receiving data from the ATA network. The CyberEther interface can be accessed using a local CyberEther instance with the Remote Block. Check out the [CyberEther documentation](https://github.com/luigifcruz/CyberEther?tab=readme-ov-file#remote-interface) for more information. To stop the application, press `Ctrl+C`.
 
 ## Useful Commands 
 
