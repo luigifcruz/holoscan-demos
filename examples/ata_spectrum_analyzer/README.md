@@ -4,7 +4,7 @@ This demo will interface with the Allen Telescope Array (ATA) network via the Ho
 ## Usage
 
 ### 1. Setup machine
-This example requires `nvidia-peermem` to be active. It's also best practice to disable dynamic clock in the CPU. This can be done by executing these commands in the **host machine**:
+This example requires `nvidia-peermem` to be active. It's also best practice to disable the dynamic clock in the CPU. This can be done by executing these commands in the **host machine**:
 ```
 $ sudo cpufreq-set -g performance
 $ sudo modprobe nvidia-peermem
