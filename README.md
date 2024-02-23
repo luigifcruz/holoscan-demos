@@ -6,6 +6,8 @@ This repository contains examples of how to use the Holoscan SDK and CyberEther 
 ### Allen Telescope Array Spectrum Analyzer
 Holoscan Advanced Networking and CyberEther effectively turn the Allen Telescope Array into a large SDR. [Go to example](./examples/ata_spectrum_analyzer/).
 
+![image_2024-02-23_00-23-37](https://github.com/luigifcruz/holoscan-demos/assets/6627901/58633943-a826-4df5-8346-2543f20ae32b)
+
 ### Complex I/Q Digital Signal Processing
 Hello world example on how to manipulate complex IQ streams within Holoscan and CyberEther. [Go to example](./examples/iq_dsp/).
 
