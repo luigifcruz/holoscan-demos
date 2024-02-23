@@ -2,47 +2,16 @@
 protocolVersion: 1.0.0
 cyberetherVersion: '1.0.0-alpha2'
 graph:
-  hol_source0:
-    module: 'holoscan-source'
-    device: cpu
-    dataType: CF32
-    config:
-      nodeOutputName: 'out'
-      nodeName: 'sdr-tx'
-    interface:
-      nodePos: [233, 308]
-      controlEnabled: false
-      previewEnabled: false
-      viewEnabled: false
-      nodeWidth: 300
-  spe1:
-    module: spectroscope
-    device: cpu
-    inputDataType: CF32
-    outputDataType: F32
-    config:
-      viewSize: [512, 512]
-      range: [-83, 1]
-      waterfall: true
-      lineplot: true
-      spectrogram: false
-    input:
-      buffer: ${graph.hol_source0.output.buffer}
-    interface:
-      nodePos: [900, 278]
-      controlEnabled: false
-      previewEnabled: true
-      viewEnabled: false
-      nodeWidth: 300
   hol_source13:
     module: 'holoscan-source'
     device: cpu
     dataType: F32
     config:
+      shape: '1, 256000'
       nodeOutputName: 'out'
       nodeName: 'fm-dem'
     interface:
-      nodePos: [360, 719]
+      nodePos: [338, 538]
       controlEnabled: false
       previewEnabled: false
       viewEnabled: false
@@ -58,7 +27,7 @@ graph:
     input:
       buffer: ${graph.hol_source13.output.buffer}
     interface:
-      nodePos: [997, 799]
+      nodePos: [802, 610]
       controlEnabled: false
       previewEnabled: false
       viewEnabled: false
@@ -73,7 +42,7 @@ graph:
     input:
       buffer: ${graph.hol_source13.output.buffer}
     interface:
-      nodePos: [695, 1030]
+      nodePos: [715, 904]
       controlEnabled: false
       previewEnabled: false
       viewEnabled: false
@@ -86,7 +55,7 @@ graph:
     input:
       buffer: ${graph.fft16.output.buffer}
     interface:
-      nodePos: [1067, 1101]
+      nodePos: [1076, 949]
       controlEnabled: false
       previewEnabled: false
       viewEnabled: false
@@ -100,7 +69,7 @@ graph:
     input:
       buffer: ${graph.amp18.output.buffer}
     interface:
-      nodePos: [1258, 1142]
+      nodePos: [1309, 929]
       controlEnabled: false
       previewEnabled: false
       viewEnabled: false
@@ -110,14 +79,18 @@ graph:
     device: cpu
     dataType: F32
     config:
+      thickness: 3
+      translation: 0.50000006
       viewSize: [512, 384]
+      zoom: 2.0000002
       numberOfHorizontalLines: 5
       numberOfVerticalLines: 20
+      averaging: 1
     input:
       buffer: ${graph.sca20.output.buffer}
     interface:
-      nodePos: [1626, 1015]
+      nodePos: [1677, 913]
       controlEnabled: false
       previewEnabled: true
-      viewEnabled: true
-      nodeWidth: 300
+      viewEnabled: false
+      nodeWidth: 469
