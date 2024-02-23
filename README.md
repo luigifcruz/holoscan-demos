@@ -1,18 +1,20 @@
 # Holoscan Demos
-This repository contains examples on how to use the Holoscan SDK and CyberEther to build SDR applications.
+This repository contains examples of how to use the Holoscan SDK and CyberEther to build SDR applications.
 
 ## Examples
 
 ### Allen Telescope Array Spectrum Analyzer
-Holoscan Advanced Networking and CyberEther effectively turning the Allen Telescope Array into a very large SDR. [Go to example](./examples/ata_spectrum_analyzer/).
+Holoscan Advanced Networking and CyberEther effectively turn the Allen Telescope Array into a large SDR. [Go to example](./examples/ata_spectrum_analyzer/).
 
 ### Complex I/Q Digital Signal Processing
-Hello world example on how to manipulate complex IQ stream within Holoscan and CyberEther. [Go to example](./examples/iq_dsp/).
+Hello world example on how to manipulate complex IQ streams within Holoscan and CyberEther. [Go to example](./examples/iq_dsp/).
 
 ![image_2024-02-22_19-39-30](https://github.com/luigifcruz/holoscan-demos/assets/6627901/8cd4f3af-b924-40b7-8217-0478ede6305b)
 
 ### Neural FM Radio
-Example with a ONNX model directly demodulating a FM radio station from a SDR IQ stream. [Go to example](./examples/neural_fm_radio/).
+Example with an ONNX model directly demodulating an FM radio station from an SDR IQ stream. [Go to example](./examples/neural_fm_radio/).
+
+https://github.com/luigifcruz/holoscan-demos/assets/6627901/4f7efe85-c07b-4db7-9573-e68f8bf80403
 
 ## Build Development Image
 
@@ -74,7 +76,7 @@ $ ninja
 Check each [example](#examples) README for further instructions.
 
 ## Notes
-The official Holoscan v0.6 docker image comes with Ubuntu 20.04 and CUDA 11.6. But BLADE and CyberEther requires at least CUDA 11.7 to work correcly. To fix this, we apply a patch to the `Dockerfile` distributed with the official image to update the base TensorRT docker image from 22.03 to 22.12. This will allow us to use CUDA 11.8 while still using Ubuntu 20.04 as the base image. This is a temporary fix until the code is ported to Holoscan v1.0 in the near future.
+The official Holoscan v0.6 docker image comes with Ubuntu 20.04 and CUDA 11.6. But BLADE and CyberEther require at least CUDA 11.7 to work correctly. To fix this, we apply a patch to the `Dockerfile` distributed with the official image to update the base TensorRT docker image from 22.03 to 22.12. This will allow us to use CUDA 11.8 while still using Ubuntu 20.04 as the base image. This is a temporary fix until the code is ported to Holoscan v1.0 in the near future.
 
 ## Feedback
 - An easy way to install Holohub operators. I had to hack an installer for the Advanced Network operator.
