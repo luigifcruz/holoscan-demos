@@ -19,17 +19,66 @@ RUN apt install -y python3-dev python3-pip
 RUN python3 -m pip install meson ninja
 
 #
+# Build Gstreamer (20.04 version too old)
+#
+
+RUN apt-get update && apt-get install -y \
+    gtk-doc-tools \
+    liborc-0.4-0 \
+    liborc-0.4-dev \
+    libvorbis-dev \
+    libcdparanoia-dev \
+    libcdparanoia0 \
+    cdparanoia \
+    libvisual-0.4-0 \
+    libvisual-0.4-dev \
+    libvisual-0.4-plugins \
+    libvisual-projectm \
+    vorbis-tools \
+    vorbisgain \
+    libopus-dev \
+    libopus-doc \
+    libopus0 \
+    libopusfile-dev \
+    libopusfile0 \
+    libtheora-bin \
+    libtheora-dev \
+    libtheora-doc \
+    libvpx-dev \
+    libvpx-doc \
+    bison \ 
+    libgstreamer-plugins-base1.0-dev \ 
+    libflac++-dev \
+    libavc1394-dev \
+    libraw1394-dev \
+    libraw1394-tools \
+    libraw1394-doc \
+    libraw1394-tools \
+    libtag1-dev \
+    libtagc0-dev \
+    libx264-dev \
+    libx265-dev \
+    libssl-dev \
+    libwavpack-dev \
+    wavpack \
+    flex \ 
+    && rm -rf /var/lib/apt/lists/*
+
+RUN git clone https://gitlab.freedesktop.org/gstreamer/gstreamer.git /gstreamer && \
+    cd /gstreamer && \
+    git checkout 1.20
+
+RUN cd /gstreamer && \
+    meson setup build --prefix=/usr --buildtype=release -Dgst-plugins-bad:nvcodec=enabled && \
+    ninja -C build && \
+    ninja -C build install
+
+#
 # CyberEther Dependencies
 #
 
-RUN apt install -y libxkbcommon-dev
-
 RUN apt update
-RUN apt install -y libgstreamer1.0-dev gstreamer1.0-tools gstreamer1.0-libav
-RUN apt install -y gstreamer1.0-plugins-base libgstreamer-plugins-bad1.0-dev 
-RUN apt install -y libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev
-RUN apt install -y gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
-
+RUN apt install -y libxkbcommon-dev
 RUN apt install -y libglfw3-dev
 RUN apt install -y libvulkan-dev vulkan-validationlayers
 RUN apt install -y python3-yaml
