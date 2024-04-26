@@ -25,9 +25,9 @@ advanced_network:
             gpu_direct: true
             split_boundary: 62          # 46 (header) + 16 (rfsoc header)
             cpu_cores: "20"
-            max_packet_size: 9000       # Maximum payload size
+            max_packet_size: 6210       # Maximum payload size
             num_concurrent_batches: 25  # Number of batches that can be used at any time
-            batch_size: 1000            # Number of packets in a batch
+            batch_size: 1400            # Number of packets in a batch
             output_port: "bench_rx_out"
         flows:
           - name: "ADC Samples"
@@ -48,14 +48,13 @@ ata_transport_rx:
   partial_block:
     number_of_antennas: 1
     number_of_channels: 96
-    number_of_samples: 32
+    number_of_samples: 16
     number_of_polarizations: 2
   offset_block:
     number_of_antennas: 0
-    number_of_channels: 1120
+    number_of_channels: 928
     number_of_samples: 0
     number_of_polarizations: 0
-  time_step_length: 16
   transport_header_size: 46
   voltage_header_size: 16
   voltage_data_size: 6144

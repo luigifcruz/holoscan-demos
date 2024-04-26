@@ -6,8 +6,8 @@ namespace Jetstream {
 
 template<Device D, typename T>
 void Source<D, T>::info() const {
-    JST_INFO("  Node name: {}", config.nodeName);
-    JST_INFO("  Node output name: {}", config.nodeOutputName);
+    JST_DEBUG("  Node name: {}", config.nodeName);
+    JST_DEBUG("  Node output name: {}", config.nodeOutputName);
 }
 
 template<Device D, typename T>

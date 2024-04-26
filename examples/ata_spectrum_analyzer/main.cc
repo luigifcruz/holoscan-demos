@@ -150,7 +150,6 @@ class AtaTransportOpRx : public Operator {
         spec.output<std::shared_ptr<BlockType>>("block_out");
 
         spec.param(concurrent_blocks_, "concurrent_blocks");
-        spec.param(time_step_length_, "time_step_length");
         spec.param(transport_header_size_, "transport_header_size");
         spec.param(voltage_header_size_, "voltage_header_size");
 
@@ -178,8 +177,7 @@ class AtaTransportOpRx : public Operator {
         for (uint64_t i = 0; i < concurrent_blocks_; i++) {
             checkerboard_pool.emplace_back(std::make_shared<Checkerboard>(total_block_, 
                                                                           partial_block_, 
-                                                                          offset_block_,
-                                                                          time_step_length_));
+                                                                          offset_block_));
         }
 
         checkerboards.reserve(concurrent_blocks_);
@@ -187,7 +185,7 @@ class AtaTransportOpRx : public Operator {
             checkerboards.push_back(checkerboard_pool[i]);
         }
 
-        block_time_length = checkerboards[0]->total_time_steps() * time_step_length_;
+        block_time_length = checkerboards[0]->total_time_steps() * checkerboards[0]->time_step_length();
 
         // Setup block tensor pool.
 
@@ -330,6 +328,7 @@ class AtaTransportOpRx : public Operator {
             uint64_t id = 0;
             
             if (!cached || !cached->in_range(packet.timestamp)) {
+                cached = nullptr;
                 for (uint64_t x = 0; x < checkerboards.size(); x++) {
                     if (checkerboards[x]->in_range(packet.timestamp)) {
                         id = x;
@@ -415,12 +414,10 @@ class AtaTransportOpRx : public Operator {
 
         explicit Checkerboard(const BlockShape& total, 
                               const BlockShape& partial,
-                              const BlockShape& offset,
-                              const uint64_t& time_step_length) : _total(total), 
-                                                                  _partial(partial),
-                                                                  _offset(offset),
-                                                                  _fragment_counter(0),
-                                                                  _time_step_length(time_step_length) {
+                              const BlockShape& offset) : _total(total), 
+                                                          _partial(partial),
+                                                          _offset(offset),
+                                                          _fragment_counter(0) {
             ASSERT(_total.number_of_antennas >= _partial.number_of_antennas);
             ASSERT(_total.number_of_channels >= _partial.number_of_channels);
             ASSERT(_total.number_of_samples >= _partial.number_of_samples);
@@ -451,9 +448,11 @@ class AtaTransportOpRx : public Operator {
             _time_range.end = 0;
 
             _total_time_steps = _sample_slots;
+            _time_step_length =  _partial.number_of_samples;
         }
 
         ~Checkerboard() {
+            rewind(0);
             CHECK_CUDA(cudaFreeHost(fragmented_gpu_data));
             CHECK_CUDA(cudaStreamDestroy(stream));
         }
@@ -626,7 +625,6 @@ class AtaTransportOpRx : public Operator {
     uint64_t last_report_packet_counter;
     
     Parameter<uint64_t> concurrent_blocks_;
-    Parameter<uint64_t> time_step_length_;
     Parameter<uint16_t> transport_header_size_;
     Parameter<uint16_t> voltage_header_size_;
 
@@ -666,19 +664,6 @@ class BladeOp : public Operator {
             this->connect(cast, {}, {
                 .buf = inputBuffer,
             });
-
-            this->connect(channelizer, {
-                .rate = config.inputShape.numberOfTimeSamples(),
-            }, {
-                .buf = cast->getOutputBuffer(),
-            });
-
-            this->connect(detector, {
-                .integrationSize = 1,
-                .numberOfOutputPolarizations = 1,
-            }, {
-                .buf = channelizer->getOutputBuffer(),
-            });
         }
 
         Blade::Result transferIn(const Blade::ArrayTensor<Blade::Device::CUDA, IT>& deviceInputBuffer) {
@@ -687,14 +672,12 @@ class BladeOp : public Operator {
         }
 
         Blade::Result transferOut(Blade::ArrayTensor<Blade::Device::CUDA, OT>& deviceOutputBuffer) {
-            BL_CHECK(this->copy(deviceOutputBuffer, detector->getOutputBuffer()));
+            BL_CHECK(this->copy(deviceOutputBuffer, cast->getOutputBuffer()));
             return Blade::Result::SUCCESS;
         }
 
     private:
         std::shared_ptr<Blade::Modules::Cast<IT, CF32>> cast;
-        std::shared_ptr<Blade::Modules::Channelizer<CF32, CF32>> channelizer;
-        std::shared_ptr<Blade::Modules::Detector<CF32, OT>> detector;
 
         Blade::ArrayTensor<Blade::Device::CUDA, IT> inputBuffer;
     };
@@ -705,9 +688,9 @@ class BladeOp : public Operator {
     BladeOp() = default;
 
     using InputBlockType = Jetstream::Tensor<Device::CUDA, CI8>;
-    using OutputBlockType = Jetstream::Tensor<Device::CUDA, F32>;
+    using OutputBlockType = Jetstream::Tensor<Device::CUDA, CF32>;
     
-    using OpPipelineType = OpPipeline<CI8, F32>;
+    using OpPipelineType = OpPipeline<CI8, CF32>;
 
     void setup(OperatorSpec& spec) override { 
         spec.input<std::shared_ptr<InputBlockType>>("block_in");
@@ -719,7 +702,7 @@ class BladeOp : public Operator {
         // TODO: Load shape from configuration file instead. 
 
         inputShape = {5, 192, 8192, 2};
-        outputShape = {5, 192*8192, 1, 1};
+        outputShape = {5, 192, 8192, 2};
 
         // Convert shapes.
         // TODO: Implement implicit cast in BLADE.
@@ -747,7 +730,7 @@ class BladeOp : public Operator {
 
         // Create output block pool.
 
-        block_pool.resize(2, std::vector<U64>{5, 192*8192});
+        block_pool.resize(2, std::vector<U64>{5, 192, 8192, 2});
     }
 
     void compute(InputContext& op_input, OutputContext& op_output, ExecutionContext&) override {
@@ -770,7 +753,7 @@ class BladeOp : public Operator {
                 std::this_thread::sleep_for(std::chrono::milliseconds(1));
             }
 
-            Blade::ArrayTensor<Blade::Device::CUDA, F32> deviceOutputBuffer(block_out->data(), bladeOutputShape);
+            Blade::ArrayTensor<Blade::Device::CUDA, CF32> deviceOutputBuffer(block_out->data(), bladeOutputShape);
             pipeline->transferOut(deviceOutputBuffer);
         }
 
@@ -799,7 +782,7 @@ class SinkOp : public Operator {
 
     SinkOp() = default;
 
-    using TensorType = Jetstream::Tensor<Device::CUDA, F32>;
+    using TensorType = Jetstream::Tensor<Device::CUDA, CF32>;
 
     void setup(OperatorSpec& spec) override { 
         spec.input<std::shared_ptr<TensorType>>("block_in");
@@ -883,7 +866,7 @@ int main(int argc, char** argv) {
     viewportConfig.endpoint = "0.0.0.0:5002";
     viewportConfig.codec = Render::VideoCodec::H264;
 
-    CyberBridge::Holoscan::StartRender("./cyberether.yml", backendConfig, viewportConfig, [&]{
+    CyberBridge::Holoscan::StartRender(argv[1], backendConfig, viewportConfig, [&]{
         if (!CyberBridge::Holoscan::IsAppRunning()) {
             ImGui::Text("Holoscan app is not running.");
             return Result::SUCCESS;

@@ -1,63 +1,99 @@
 ---
 protocolVersion: 1.0.0
-cyberetherVersion: '1.0.0-alpha3'
+cyberetherVersion: '1.0.0-alpha4'
 graph:
-  hol_source0:
+  hol_source5:
     module: 'holoscan-source'
     device: cuda
-    dataType: F32
+    dataType: CF32
     config:
-      shape: '5, 1572864'
+      shape: '5, 192, 8192, 2'
       nodeOutputName: 'block_out'
       nodeName: 'blade'
     interface:
-      nodePos: [286, 411]
+      nodePos: [-181, 245]
+      fullscreenEnabled: false
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  sli0:
+    module: slice
+    device: cuda
+    dataType: CF32
+    config:
+      slice: '[0, 0, :, 0]'
+    input:
+      buffer: ${graph.hol_source5.output.buffer}
+    interface:
+      nodePos: [163, 267]
+      fullscreenEnabled: false
+      controlEnabled: false
+      previewEnabled: false
+      viewEnabled: false
+      nodeWidth: 300
+  dup1:
+    module: duplicate
+    device: cuda
+    dataType: CF32
+    config:
+      hostAccessible: true
+    input:
+      buffer: ${graph.sli0.output.buffer}
+    interface:
+      nodePos: [504, 332]
+      fullscreenEnabled: false
       controlEnabled: false
       previewEnabled: false
       viewEnabled: false
       nodeWidth: 300
   amp3:
     module: amplitude
-    device: cuda
-    inputDataType: F32
+    device: cpu
+    inputDataType: CF32
     outputDataType: F32
     input:
-      buffer: ${graph.hol_source0.output.buffer}
+      buffer: ${graph.dup1.output.buffer}
     interface:
-      nodePos: [641, 567]
+      nodePos: [855, 407]
+      fullscreenEnabled: false
       controlEnabled: false
       previewEnabled: false
       viewEnabled: false
       nodeWidth: 154
-  sca5:
+  sca9:
     module: scale
     device: cuda
     dataType: F32
     config:
-      range: [-26, 10]
+      range: [-162, -23]
     input:
       buffer: ${graph.amp3.output.buffer}
     interface:
-      nodePos: [848, 605]
+      nodePos: [1068, 446]
+      fullscreenEnabled: false
       controlEnabled: false
       previewEnabled: false
       viewEnabled: false
       nodeWidth: 300
-  wat2:
-    module: waterfall
+  lin10:
+    module: lineplot
     device: cuda
     dataType: F32
     config:
+      thickness: 2
+      translation: 0
       viewSize: [512, 384]
-      interpolate: true
-      height: 512
-      offset: 0
       zoom: 1
+      numberOfHorizontalLines: 5
+      numberOfVerticalLines: 20
+      averaging: 94
     input:
-      buffer: ${graph.sca5.output.buffer}
+      buffer: ${graph.sca9.output.buffer}
     interface:
-      nodePos: [1176, 369]
+      nodePos: [1436, 444]
+      fullscreenEnabled: false
       controlEnabled: false
       previewEnabled: true
-      viewEnabled: false
+      viewEnabled: true
       nodeWidth: 300
