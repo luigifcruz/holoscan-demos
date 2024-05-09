@@ -27,34 +27,26 @@ $ cd holoscan-demos
 $ git submodule update --init --recursive
 ```
 
-### 2. Patch the official Holoscan container
-```
-$ git apply patches/cuda_upgrade.patch 
-```
-
-### 3. Build official Holoscan container
-```
-$ cd holoscan-sdk
-$ ./run setup
-$ ./run build_image --platform linux/amd64 --gpu dgpu
-$ cd ..
-```
-
-### 4. Build base container
+### 2. Build base container
 ```
 $ docker build -t holoscan-base -f Dockerfile-base .
 ```
 
-### 5. Build demo container
+### 3. Build demo container
 ```
 $ docker build -t holoscan-demo -f Dockerfile .
 ```
 
-### 6. Run the demo container
+### 4. Run the demo container
 ```
 $ nvidia_icd_json=$(find /usr/share /etc -path '*/vulkan/icd.d/nvidia_icd.json' -type f -print -quit 2>/dev/null | grep .) || (echo "nvidia_icd.json not found" >&2 && false)
-$ sudo docker run -it --rm --net host --privileged --runtime=nvidia -u root \
+$ sudo docker run -it --rm -u root \
+    --net host \
+    --privileged \
+    --runtime=nvidia \
     --device /dev/snd \
+    --ulimit memlock=-1 \
+    --ulimit stack=67108864 \
     -v /dev/bus/usb:/dev/bus/usb \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /mnt/huge:/mnt/huge \
@@ -65,7 +57,7 @@ $ sudo docker run -it --rm --net host --privileged --runtime=nvidia -u root \
     holoscan-demo
 ```
 
-### 7. Compile the examples
+### 5. Compile the examples
 This directory with the examples will be mounted at `/workspace/demos`. You can compile the examples with the following commands:
 ```
 $ cd demos
@@ -74,7 +66,7 @@ $ cd build
 $ ninja
 ```
 
-### 7. Fun!
+### 6. Fun!
 Check each [example](#examples) README for further instructions.
 
 ## Notes

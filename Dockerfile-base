@@ -1,37 +1,12 @@
-FROM holoscan-sdk-dev
+FROM nvcr.io/nvidia/clara-holoscan/holoscan:v2.0.0-dgpu
 
 ARG DEBIAN_FRONTEND=noninteractive
-
-#
-# Holoscan SDK
-#
-
-COPY ./holoscan-sdk /workspace/holoscan-sdk
-
-RUN cd /workspace/holoscan-sdk && \
-    rm -fr build && \
-    mkdir build && \
-    cd build && \
-    cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release \
-                      -DEXPECTED_ENABLE_TESTS=OFF \
-                      -DHOLOSCAN_BUILD_EXAMPLES=ON \
-                      -DHOLOSCAN_BUILD_TESTS=OFF \
-                      -DHOLOSCAN_BUILD_LIBTORCH=OFF && \
-    ninja install
 
 #
 # Advanced Network Operator
 #
 
 COPY ./holohub /workspace/holohub
-
-# Install MLX5 (Advanced Network Dependency) [**ARCH DEPENDENT**]
-
-ARG ARCH=x86_64
-RUN wget -q https://content.mellanox.com/ofed/MLNX_OFED-5.8-1.0.1.1/MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-${ARCH}.tgz && \
-    tar xf MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-${ARCH}.tgz && \
-    cd MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-${ARCH} && \
-    ./mlnxofedinstall --upstream-libs --dpdk --with-mft --upstream-libs --user-space-only --force --without-fw-update
 
 # Install DPDK (Advanced Network Dependency)
 

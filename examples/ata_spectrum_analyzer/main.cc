@@ -124,11 +124,6 @@ struct YAML::convert<BlockShape> {
 };
 
 
-
-// TODO: Add BLADE Operator YAML serialization.
-
-
-
 namespace holoscan::ops {
 
 class AtaTransportOpRx : public Operator {
@@ -695,30 +690,27 @@ class BladeOp : public Operator {
     void setup(OperatorSpec& spec) override { 
         spec.input<std::shared_ptr<InputBlockType>>("block_in");
         spec.output<std::shared_ptr<OutputBlockType>>("block_out");
+
+        spec.param(inputShape, "input");
+        spec.param(outputShape, "output");
     }
 
     void start() {
-        // Setup shapes.
-        // TODO: Load shape from configuration file instead. 
-
-        inputShape = {5, 192, 8192, 2};
-        outputShape = {5, 192, 8192, 2};
-
         // Convert shapes.
         // TODO: Implement implicit cast in BLADE.
 
         bladeInputShape = Blade::ArrayShape({
-            inputShape[0],
-            inputShape[1],
-            inputShape[2],
-            inputShape[3],
+            inputShape.get().number_of_antennas, 
+            inputShape.get().number_of_channels, 
+            inputShape.get().number_of_samples, 
+            inputShape.get().number_of_polarizations,
         });
 
         bladeOutputShape = Blade::ArrayShape({
-            outputShape[0],
-            outputShape[1],
-            outputShape[2],
-            outputShape[3],
+            outputShape.get().number_of_antennas, 
+            outputShape.get().number_of_channels, 
+            outputShape.get().number_of_samples, 
+            outputShape.get().number_of_polarizations,
         });
 
         // Create pipeline.
@@ -730,15 +722,23 @@ class BladeOp : public Operator {
 
         // Create output block pool.
 
-        block_pool.resize(2, std::vector<U64>{5, 192, 8192, 2});
+        block_pool.resize(2, std::vector<U64>{
+            outputShape.get().number_of_antennas, 
+            outputShape.get().number_of_channels, 
+            outputShape.get().number_of_samples, 
+            outputShape.get().number_of_polarizations,
+        });
     }
 
     void compute(InputContext& op_input, OutputContext& op_output, ExecutionContext&) override {
         const auto& block_in = op_input.receive<std::shared_ptr<InputBlockType>>("block_in").value();
         std::shared_ptr<OutputBlockType> block_out;
         
-        if (block_in->shape() != inputShape) {
-            JST_ERROR("Input shape {} is different than the configuration shape {}.", block_in->shape(), inputShape);
+        if (block_in->shape()[0] != inputShape.get().number_of_antennas &&
+            block_in->shape()[1] != inputShape.get().number_of_channels &&
+            block_in->shape()[2] != inputShape.get().number_of_samples &&
+            block_in->shape()[3] != inputShape.get().number_of_polarizations) {
+            JST_ERROR("Input shape {} is different than the configuration shape.", block_in->shape());
             return;
         }
 
@@ -767,8 +767,8 @@ class BladeOp : public Operator {
  private:
     std::shared_ptr<OpPipelineType> pipeline;
 
-    std::vector<U64> inputShape;
-    std::vector<U64> outputShape;
+    Parameter<BlockShape> inputShape;
+    Parameter<BlockShape> outputShape;
 
     Blade::ArrayShape bladeInputShape;
     Blade::ArrayShape bladeOutputShape;
@@ -809,7 +809,8 @@ class App : public holoscan::Application {
         auto adv_net_rx = make_operator<ops::AdvNetworkOpRx>("adv_network_rx",
                                                              from_config("advanced_network"),
                                                              make_condition<BooleanCondition>("is_alive", true));
-        auto blade = make_operator<ops::BladeOp>("blade");
+        auto blade = make_operator<ops::BladeOp>("blade",
+                                                 from_config("blade_runner"));
         auto sink = make_operator<ops::SinkOp>("sink");
 
         add_flow(adv_net_rx, ata_transport_rx, {{"bench_rx_out", "burst_in"}});

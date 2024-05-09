@@ -60,29 +60,13 @@ ata_transport_rx:
   voltage_data_size: 6144
 
 blade_runner:
-  blocks:
-    - cast
-    - channelizer
-    - detector
   input:
-    type: CU8
-    shape: [5, 192, 8192, 2]
+    number_of_antennas: 5
+    number_of_channels: 192
+    number_of_samples: 8192
+    number_of_polarizations: 2
   output:
-    type: F32
-    shape: [5, 1572864, 1, 1]
-  config:
-    cast:
-      module: cast
-      input_type: CU8
-      output_type: CF32
-    channelizer:
-      module: channelizer
-      input_type: CF32
-      output_type: CF32
-      rate: 8192
-    detector:
-      module: detector
-      input_type: CF32
-      output_type: F32
-      integrationSize: 1
-      numberOfOutputPolarizations: 1
+    number_of_antennas: 5
+    number_of_channels: 192
+    number_of_samples: 8192
+    number_of_polarizations: 2
