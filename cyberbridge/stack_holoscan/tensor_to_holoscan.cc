@@ -65,7 +65,17 @@ std::shared_ptr<holoscan::Tensor> Holoscan::TensorToHoloscan(Tensor<D, T>& tenso
 
     auto tg = std::make_shared<nvidia::gxf::Tensor>();
     tg->wrapMemory(shape, type, sizeof(T), stride, device, data, dealloc);
-    return holoscan::gxf::GXFTensor(*tg).as_tensor();
+
+    // Create DL tensor.
+
+    auto maybe_dl_ctx = tg->toDLManagedTensorContext();
+
+    if (!maybe_dl_ctx.has_value()) {
+        JST_ERROR("Failed to convert GXF tensor to DLManagedTensor.");
+        JST_CHECK_THROW(Result::ERROR);
+    }
+
+    return std::make_shared<holoscan::Tensor>(maybe_dl_ctx.value());
 }
 
 template std::shared_ptr<holoscan::Tensor> Holoscan::TensorToHoloscan<Device::CPU, U8>(Tensor<Device::CPU, U8>& tensor);

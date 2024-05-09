@@ -8,9 +8,9 @@
 
 #include <holoscan/holoscan.hpp>
 #include <holoscan/core/operator.hpp>
-#include <holoscan/operators/adv_network/adv_network_rx.h>
-#include <holoscan/operators/adv_network/adv_network_tx.h>
-#include <holoscan/operators/adv_network/adv_network_kernels.h>
+#include <holoscan/operators/advanced_network/adv_network_rx.h>
+#include <holoscan/operators/advanced_network/adv_network_tx.h>
+#include <holoscan/operators/advanced_network/adv_network_kernels.h>
 
 #include <netinet/in.h>
 

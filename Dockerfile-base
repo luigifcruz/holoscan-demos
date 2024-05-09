@@ -49,7 +49,7 @@ RUN apt update && \
 COPY ./patches /workspace/patches
 RUN cd /workspace/holohub/operators/advanced_network && \
     patch -p1 < /workspace/patches/adv_networking_install.patch && \
-    patch -p1 < /workspace/patches/adv_networking.patch && \
+    patch -p1 < /workspace/patches/adv_networking_multi.patch && \
     rm -fr build && \
     mkdir build && \
     cd build && \
