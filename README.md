@@ -45,6 +45,8 @@ $ sudo docker run -it --rm -u root \
     --privileged \
     --runtime=nvidia \
     --device /dev/snd \
+    --cap-add CAP_SYS_PTRACE \
+    --ipc=host \
     --ulimit memlock=-1 \
     --ulimit stack=67108864 \
     -v /dev/bus/usb:/dev/bus/usb \
