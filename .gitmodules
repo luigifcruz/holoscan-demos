@@ -1,6 +1,3 @@
-[submodule "holoscan-sdk"]
-	path = holoscan-sdk
-	url = https://github.com/nvidia-holoscan/holoscan-sdk.git
 [submodule "holohub"]
 	path = holohub
 	url = https://github.com/nvidia-holoscan/holohub.git
