@@ -23,6 +23,7 @@
 #include <vector>
 
 #include "defragmentation_kernel.hh"
+#include "types.hh"
 
 using namespace Jetstream;
 
@@ -64,13 +65,6 @@ struct VoltagePacket {
 } __attribute__((packed));
 
 
-
-struct BlockShape {
-    uint64_t number_of_antennas;
-    uint64_t number_of_channels;
-    uint64_t number_of_samples;
-    uint64_t number_of_polarizations;
-};
 
 template<>
 struct fmt::formatter<BlockShape> {
@@ -439,6 +433,15 @@ class AtaTransportOpRx : public Operator {
                             _partial.number_of_samples * 
                             _partial.number_of_polarizations;
 
+            _fragment.number_of_antennas = _total.number_of_antennas / 
+                                           _partial.number_of_antennas;
+            _fragment.number_of_channels = _total.number_of_channels / 
+                                           _partial.number_of_channels;
+            _fragment.number_of_samples = _total.number_of_samples / 
+                                          _partial.number_of_samples;
+            _fragment.number_of_polarizations = _total.number_of_polarizations / 
+                                                _partial.number_of_polarizations;
+
             _time_range.start = 0;
             _time_range.end = 0;
 
@@ -567,6 +570,9 @@ class AtaTransportOpRx : public Operator {
                                                    fragmented_gpu_data, 
                                                    _total_fragments, 
                                                    _partial_size,
+                                                   _total,
+                                                   _partial,
+                                                   _fragment,
                                                    stream));
         }
 
@@ -574,6 +580,7 @@ class AtaTransportOpRx : public Operator {
         BlockShape _total;
         BlockShape _partial;
         BlockShape _offset;
+        BlockShape _fragment;
 
         uint64_t _fragment_counter;
         uint64_t _total_fragments;
