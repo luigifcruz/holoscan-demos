@@ -1,37 +1,12 @@
-FROM holoscan-sdk-dev
+FROM nvcr.io/nvidia/clara-holoscan/holoscan:v2.0.0-dgpu
 
 ARG DEBIAN_FRONTEND=noninteractive
-
-#
-# Holoscan SDK
-#
-
-COPY ./holoscan-sdk /workspace/holoscan-sdk
-
-RUN cd /workspace/holoscan-sdk && \
-    rm -fr build && \
-    mkdir build && \
-    cd build && \
-    cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release \
-                      -DEXPECTED_ENABLE_TESTS=OFF \
-                      -DHOLOSCAN_BUILD_EXAMPLES=ON \
-                      -DHOLOSCAN_BUILD_TESTS=OFF \
-                      -DHOLOSCAN_BUILD_LIBTORCH=OFF && \
-    ninja install
 
 #
 # Advanced Network Operator
 #
 
 COPY ./holohub /workspace/holohub
-
-# Install MLX5 (Advanced Network Dependency) [**ARCH DEPENDENT**]
-
-ARG ARCH=x86_64
-RUN wget -q https://content.mellanox.com/ofed/MLNX_OFED-5.8-1.0.1.1/MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-${ARCH}.tgz && \
-    tar xf MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-${ARCH}.tgz && \
-    cd MLNX_OFED_LINUX-5.8-1.0.1.1-ubuntu20.04-${ARCH} && \
-    ./mlnxofedinstall --upstream-libs --dpdk --with-mft --upstream-libs --user-space-only --force --without-fw-update
 
 # Install DPDK (Advanced Network Dependency)
 
@@ -49,9 +24,9 @@ RUN apt update && \
         && rm -rf /var/lib/apt/lists/*
 RUN python3 -m pip install meson ninja
 
-RUN wget -q https://fast.dpdk.org/rel/dpdk-22.11.1.tar.xz && \
-    tar xf dpdk-22.11.1.tar.xz && \
-    cd dpdk-stable-22.11.1/ && \
+RUN wget -q https://fast.dpdk.org/rel/dpdk-23.11.tar.xz && \
+    tar xf dpdk-23.11.tar.xz && \
+    cd dpdk-23.11/ && \
     patch --ignore-whitespace --fuzz 3 \
         config/arm/meson.build \
         /workspace/holohub/operators/advanced_network/dpdk_patches/dpdk.nvidia.patch && \
@@ -74,7 +49,7 @@ RUN apt update && \
 COPY ./patches /workspace/patches
 RUN cd /workspace/holohub/operators/advanced_network && \
     patch -p1 < /workspace/patches/adv_networking_install.patch && \
-    patch -p1 < /workspace/patches/adv_networking.patch && \
+    patch -p1 < /workspace/patches/adv_networking_multi.patch && \
     rm -fr build && \
     mkdir build && \
     cd build && \
